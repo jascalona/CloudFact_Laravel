@@ -14,12 +14,8 @@
             crossorigin="anonymous"/>
 
         <!-- Bootstrap CSS v5.2.1 -->
-
-
-
         
     </head>
-
     <body>
 
 
@@ -74,12 +70,6 @@
         </div>
     </div>
     </section>
-
-
-
-
-    
-    
     
     
         <!-- Bootstrap JavaScript Libraries -->
