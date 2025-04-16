@@ -54,10 +54,10 @@
                             <i class='bx bx-user'></i>
                             <span>Perfil</span>
                         </a>
-                    </li>
+                    </li><br>
 
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="{{ route('.dashboard') }}" class="sidebar-link">
                             <i class='bx bxs-dashboard'></i>
                             <span>Panel</span>
                         </a>
@@ -71,7 +71,7 @@
                     </li>
 
                     <li class="sidebar-item">
-                        <a href="#" class="sidebar-link">
+                        <a href="{{ route('.park') }}" class="sidebar-link">
                             <i class='bx bx-printer'></i>
                             <span>Parque</span>
                         </a>
@@ -131,7 +131,7 @@
 
             </aside>
 
-
+            
             <!--CONETENIDO-->
             @yield('content')
             <!--CONETENIDO-->
