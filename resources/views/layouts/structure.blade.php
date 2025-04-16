@@ -131,10 +131,9 @@
 
             </aside>
 
-            <!--CONETENIDO-->
 
+            <!--CONETENIDO-->
             @yield('content')
-         
             <!--CONETENIDO-->
 
 
