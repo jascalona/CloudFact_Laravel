@@ -1,3 +1,4 @@
+@extends('layouts.app')
 
 <!doctype html>
 <html lang="en">
@@ -32,7 +33,7 @@
                 <div class="col-md-6 col-lg-7 d-flex align-items-center">
                 <div class="card-body p-4 p-lg-5 text-black">
 
-                    <form action="{{ route('login') }}" method="POST">
+                    <form action="{{ route('login') }}" method="post">
                         @csrf
 
                     <div class="d-flex align-items-center mb-3 pb-1">
@@ -53,7 +54,7 @@
                     </div>
 
                     <div class="pt-1 mb-4">
-                        <button name="btn-log" type="button" data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" value="submit">Ingresar</button>
+                        <button name="btn-log" type="submit" data-mdb-button-init data-mdb-ripple-init class="btn btn-dark btn-lg btn-block" value="submit">Ingresar</button>
                     </div>
 
                     <p class="mb-5 pb-lg-2" style="color: #393f81;">Aun no tienes cuenta? <a href="#!"
