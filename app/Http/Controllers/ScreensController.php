@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Customer;
 
 class ScreensController extends Controller
 {
@@ -15,7 +16,9 @@ class ScreensController extends Controller
      }
 
      public function lead(){
-        return view("screens.lead");
+
+         $customers = Customer::all();
+         return view("screens.lead", compact("customers"));
      }
 
 }

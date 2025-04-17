@@ -719,3 +719,17 @@ p {
     line-height: 1.7;
 }
 
+
+.container-gallery{
+    max-width: 90%;
+    margin: 0 auto;
+    display: grid;
+    gap: 3%;
+}
+
+@media (min-width: 992px) {
+    .container-gallery{
+        background: blue;
+        grid-template-columns: repeat(, 1fr);
+    }
+}

@@ -75,125 +75,42 @@
                         </p>
                     </div>
 
-                    <!--CARDS-->
-                    <!--EStadisticas-->
-                    <div class="main-content">
-                        <div class="header pb-8 pt-5 pt-md-8">
-                            <div class="container-fluid">
-                                <div class="header-body">
-                                    <div class="row">
-
-                                        <div class="col-xl-3 col-lg-6">
-                                            <div class="card card-stats mb-4 mb-xl-0">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h5 class="card-title text-uppercase text-muted mb-0">Ventas
-                                                            </h5>
-                                                            <span class="h2 font-weight-bold mb-0">350,897</span>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div
-                                                                class="icon icon-shape bg-danger text-white rounded-circle shadow">
-                                                                <i class='bx bx-line-chart'></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <p class="mt-3 mb-0 text-muted text-sm">
-                                                        <span class="text-success mr-2"><i
-                                                                class="fa fa-arrow-up"></i></span>
-                                                        <span class="text-nowrap">Ventas realizadas</span>
-                                                    </p>
-                                                </div>
+                    @foreach ($customers as $row)
+                            <!--CARDS-->
+                        
+                            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                                <div class="card">
+                                    <div class="card-header p-2 ps-3">
+                                        <div class="d-flex justify-content-between">
+                                            <div>
+                                                <p class="text-sm mb-0 text-capitalize">{{ $row->name }}</p>
+                                                <h4 class="mb-0 mt-3">{{ $row->rif }}</h4>
                                             </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-lg-6">
-                                            <div class="card card-stats mb-4 mb-xl-0">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h5 class="card-title text-uppercase text-muted mb-0">SGD</h5>
-                                                            <span class="h2 font-weight-bold mb-0">350</span>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div
-                                                                class="icon icon-shape bg-warning text-white rounded-circle shadow">
-                                                                <i class='bx bxs-group'></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <p class="mt-3 mb-0 text-muted text-sm">
-                                                        <span class="text-danger mr-2"><i
-                                                                class="fas fa-arrow-down"></i></span>
-                                                        <span class="text-nowrap">Contrato SGD</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-lg-6">
-                                            <div class="card card-stats mb-4 mb-xl-0">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h5 class="card-title text-uppercase text-muted mb-0">Equipos
-                                                            </h5>
-                                                            <span class="h2 font-weight-bold mb-0">924</span>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div
-                                                                class="icon icon-shape bg-yellow text-white rounded-circle shadow">
-                                                                <i class='bx bxs-printer'></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <p class="mt-3 mb-0 text-muted text-sm">
-                                                        <span class="text-warning mr-2"><i
-                                                                class="fas fa-arrow-down"></i></span>
-                                                        <span class="text-nowrap">Equipos en cliente</span>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-xl-3 col-lg-6">
-                                            <div class="card card-stats mb-4 mb-xl-0">
-                                                <div class="card-body">
-                                                    <div class="row">
-                                                        <div class="col">
-                                                            <h5 class="card-title text-uppercase text-muted mb-0">
-                                                                Inventario</h5>
-                                                            <span class="h2 font-weight-bold mb-0">49,6%</span>
-                                                        </div>
-                                                        <div class="col-auto">
-                                                            <div
-                                                                class="icon icon-shape bg-info text-white rounded-circle shadow">
-                                                                <i class='bx bxs-package'></i>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <p class="mt-3 mb-0 text-muted text-sm">
-                                                        <span class="text-success mr-2"><i
-                                                                class="fas fa-arrow-up"></i></span>
-                                                        <span class="text-nowrap">Equipos disponibles</span>
-                                                    </p>
-                                                </div>
+                                            <div
+                                                class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                                <i class='bx bxs-bar-chart-alt-2'></i>
                                             </div>
                                         </div>
                                     </div>
+                                    <hr class="dark horizontal my-0">
+                                    <div class="card-footer p-2 ps-3">
+                                        <p class="mb-0 text-sm">Equipos: <span class="text-success font-weight-bolder">{{ $row->cant_device }} </span></p>
+                                    </div>
                                 </div>
                             </div>
+
+
+
                         </div>
-                        <!-- Page content -->
-                    </div>
-                    <!--EStadisticas-->
-
-                    <!--CARDS-->
-                </div>
+                        <!--CARDS-->
+                    @endforeach
 
 
-              
+
+            </div>
+
+
+
 
             </div>
 
