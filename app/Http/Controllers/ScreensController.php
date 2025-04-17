@@ -14,4 +14,8 @@ class ScreensController extends Controller
         return view("screens.park");
      }
 
+     public function lead(){
+        return view("screens.lead");
+     }
+
 }

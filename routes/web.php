@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CustomerController;
+
 
 Route::get('/', function () {
     return view('auth.login');
@@ -8,12 +10,18 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/dashboard', [App\Http\Controllers\HomeController::class, 'index'])->name('.dashboard');
+Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index'])->name('.dashboard');
 
-Route::get('home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
+//Route::get('home', [App\Http\Controllers\HomeController::class,'index'])->name('home');
 
 /**
  * Declaracion de rutas
  */
 
  Route::get('/park', [App\Http\Controllers\ScreensController::class, 'park'])->name('.park');
+
+ Route::resource('/customers',CustomerController::class)->names('customer');
+
+
+ /**rutas de lecturas */
+ Route::get('/lead', [App\Http\Controllers\ScreensController::class,'lead'])->name('.lead');
