@@ -10,6 +10,7 @@
     <title>CloudFact-Lead</title>
 
     <!--STYLES-->
+    <link rel="stylesheet" href="{{ asset('assets/setting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/bootstrap.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/card.css') }}">
@@ -74,10 +75,13 @@
                             Monitorea metricas clave. Consulta Informes y analiza la informacion
                         </p>
                     </div>
+                    </div>
+
+
+                    <div style="" class="container-card-lead">
 
                     @foreach ($customers as $row)
                             <!--CARDS-->
-                        
                             <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
                                 <div class="card">
                                     <div class="card-header p-2 ps-3">
@@ -99,11 +103,11 @@
                                 </div>
                             </div>
 
-
-
-                        </div>
                         <!--CARDS-->
                     @endforeach
+                    </div>
+
+
 
 
 
