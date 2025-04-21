@@ -5,6 +5,11 @@
     display: grid;
 }
 
+.container-card-lead .card span a{
+    color: #423d3d;
+    padding-top: 5px;
+}
+
 .container-card-lead .card{
     border: solid;
     min-width: 300px;

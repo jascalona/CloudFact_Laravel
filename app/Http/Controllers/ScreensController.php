@@ -21,4 +21,10 @@ class ScreensController extends Controller
          return view("screens.lead", compact("customers"));
      }
 
+    public function Lgeneral(){
+        //$table = "load_reading";
+        
+        return view("screens.Lgeneral");
+    }
+
 }

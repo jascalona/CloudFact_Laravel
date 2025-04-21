@@ -75,38 +75,84 @@
                             Monitorea metricas clave. Consulta Informes y analiza la informacion
                         </p>
                     </div>
-                    </div>
+                </div>
 
 
-                    <div style="" class="container-card-lead">
-
-                    @foreach ($customers as $row)
-                            <!--CARDS-->
-                            <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
-                                <div class="card">
-                                    <div class="card-header p-2 ps-3">
-                                        <div class="d-flex justify-content-between">
-                                            <div>
-                                                <p class="text-sm mb-0 text-capitalize">{{ $row->name }}</p>
-                                                <h4 class="mb-0 mt-3">{{ $row->rif }}</h4>
+                <!--SECTION GENERAL-->
+                <div class="container-fluid py-2 mb-6">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="row">
+                               
+                                <div class="col-md-12 mb-lg-0 mb-4">
+                                    <div class="card">
+                                        <div class="card-header pb-0 p-3">
+                                            <div class="row">
+                                                <div class="col-6 d-flex align-items-center">
+                                                    <h4 class="mb-0">Informe Detallado Global</h4>
+                                                </div>
+                                                <div class="col-6 mb-2 text-end">
+                                                    <a class="btn bg-gradient-dark mb-0" href="{{ route('Lgeneral') }}"><i class='bx bxs-book-open'></i></a>
+                                                </div>
                                             </div>
-                                            <div
-                                                class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
-                                                <i class='bx bxs-bar-chart-alt-2'></i>
+                                        </div>
+                                        <div class="card-body p-3">
+                                            <div class="row">
+                                                <div class="col-md-6 mb-md-0 mb-4">
+                                                    <div
+                                                        class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                                        <img class="w-10 me-3 mb-0" src="{{ asset('images/xdv.png') }}"
+                                                            alt="logo">
+                                                        <h6 class="mb-0">
+                                                            Total de CLientes: 52
+                                                        </h6>
+                                                        <i style="font-size: 20px" class="bx bx-group ms-auto text-dark cursor-pointer"
+                                                            data-bs-toggle="tooltip" data-bs-placement="top"></i>
+                                                    </div>
+                                                </div>
+                                                
                                             </div>
                                         </div>
                                     </div>
-                                    <hr class="dark horizontal my-0">
-                                    <div class="card-footer p-2 ps-3">
-                                        <p class="mb-0 text-sm">Equipos: <span class="text-success font-weight-bolder">{{ $row->cant_device }} </span></p>
-                                        <span><a href="">Detalles</a></span>
-                                    </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <!--SECTION GENERAL-->
+
+
+
+                <div style="" class="container-card-lead">
+
+                    @foreach ($customers as $row)
+                        <!--CARDS-->
+                        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+                            <div class="card">
+                                <div class="card-header p-2 ps-3">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="text-sm mb-0 text-capitalize">{{ $row->name }}</p>
+                                            <h4 class="mb-0 mt-3">{{ $row->rif }}</h4>
+                                        </div>
+                                        <div
+                                            class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                            <i class='bx bxs-bar-chart-alt-2'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="dark horizontal my-0">
+                                <div class="card-footer p-2 ps-3">
+                                    <p class="mb-0 text-sm">Equipos: <span
+                                            class="text-success font-weight-bolder">{{ $row->cant_device }} </span></p>
+                                    <span><a href="">Detalles</a></span>
+                                </div>
+                            </div>
+                        </div>
 
                         <!--CARDS-->
                     @endforeach
-                    </div>
+                </div>
 
 
 

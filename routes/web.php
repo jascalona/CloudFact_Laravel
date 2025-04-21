@@ -25,3 +25,7 @@ Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index
 
  /**rutas de lecturas */
  Route::get('/lead', [App\Http\Controllers\ScreensController::class,'lead'])->name('.lead');
+
+ /**ruta lectura general */
+Route::get('/Lgeneral', [App\Http\Controllers\ScreensController::class,'Lgeneral'])->name(  'Lgeneral');
+ 
