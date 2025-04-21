@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ImportController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 
@@ -25,6 +26,12 @@ Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index
 
  /**rutas de lecturas */
  Route::get('/lead', [App\Http\Controllers\ScreensController::class,'lead'])->name('.lead');
+
+
+/**ruta for ImportCSV */
+Route::get('Lgeneral', [App\Http\Controllers\ImportController::class,'form'])->name('form');
+
+Route::post('Lgeneral',[App\Http\Controllers\ImportController::class, 'import'])->name('import');
 
  /**ruta lectura general */
 Route::get('/Lgeneral', [App\Http\Controllers\ScreensController::class,'Lgeneral'])->name(  'Lgeneral');

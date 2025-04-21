@@ -145,11 +145,11 @@
                                                                         <p>Realice la carga de lecturas através de un CSV.
                                                                         </p>
 
-                                                                        <form action="../CONTROLLER/load_csv.php"
-                                                                            method="POST" enctype="multipart/form-data">
+                                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                                            @csrf
                                                                             <div class="file-input text-center">
                                                                                 <input type="file" accept=".csv"
-                                                                                    name="dataCliente" id="file-input"
+                                                                                    name="file" id="file-input"
                                                                                     class="form-control" required />
                                                                                 <label class="file-input__label"
                                                                                     for="file-input">
@@ -161,7 +161,7 @@
                                                                                     id="btn_load"
                                                                                     onclick="load_reading_general();"
                                                                                     class="btn btn-dark"
-                                                                                    value="Submit">Cargar
+                                                                                    value="submit">Cargar
                                                                                     .CSV</button>
                                                                             </div>
                                                                         </form>
@@ -238,6 +238,13 @@
 
 
                 <div class="main p-5">
+
+                    @if (session('success'))
+                        <div class="alert alert-success" role="aler">
+                            {{ session('success') }}
+                        </div>
+                    @endif
+                    
 
                     <!--Estructura de park-->
                     <table id="myTable" class="display">
