@@ -61,7 +61,14 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link text-dark" href="../pages/virtual-reality.html">
+                    <a class="nav-link text-dark" href="{{ route('bill') }}">
+                    <i class='bx bx-file'></i>
+                        <span class="nav-link-text ms-1">Facturación</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{{ route('install') }}">
                         <i class='bx bx-move-horizontal'></i>
                         <span class="nav-link-text ms-1">Instalaciones</span>
                     </a>

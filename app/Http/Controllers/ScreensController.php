@@ -37,4 +37,12 @@ class ScreensController extends Controller
         return view("layouts.LCustomer", compact("Lgenals"));
     }
 
+    public function bill(){
+        return view("screens.bill");
+    }
+
+    public function install(){
+        return view("screens.install");
+    }
+
 }

@@ -221,9 +221,9 @@
                                             <h6 class="mb-3">Resumen de Facturas</h6>
                                         </div>
                                         <!--
-                                                                                                        <div class="col-6 text-end">
-                                                                                                            <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
-                                                                                                        </div> -->
+                                                                                                                        <div class="col-6 text-end">
+                                                                                                                            <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
+                                                                                                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="card-body p-3 pb-0">
@@ -399,33 +399,20 @@
                         @endif
 
 
-                        <script>
-                            const btnright = document.getElementById("scroll-button-right");
-                            const btnleft = document.getElementById("scroll-button-left");
-
-
-                            const content = document.querySelector(".content-table");
-
-                            //Funtion click
-                            btnright.addEventListener("click", () => {
-                                content.scrollLeft += 800;
-                            });
-
-                            btnleft.addEventListener("click", () => {
-                                content.scrollLeft -= 800;
-                            });
-                        </script>
-
                         <div class="container-table">
 
-                            <div class="icons-pages">
-                                <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
-                                <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                            <div class="head-t">
+                                <p>Customer's: <small>Lead</small></p>
+
                             </div>
-                            <br>
+
+
+                            <div class="icons-pages">
+                                    <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                                    <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                            </div><br>
 
                             <div class="content-table">
-
 
                                 <!--Estructura de park-->
                                 <table id="myTable" class="display">
@@ -483,17 +470,24 @@
 
                 </div>
 
-
-
+            </div>
+            </div>
             </div>
 
+            <footer class="footer py-4  ">
+                <div class="container-fluid">
+                    <div class="row align-items-center justify-content-lg-between">
+                        <div class="col-lg-6 mb-lg-0 mb-4">
+                            <div class="copyright text-center text-sm text-muted text-lg-start">
+                                © 2010-2025. CloudFact <i class="fa fa-heart"></i> by
+                                <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Xerox de
+                                    Venezuela</a>
+                            </div>
+                        </div>
 
-
-
-            </div>
-
-
-            </div>
+                    </div>
+                </div>
+            </footer>
 
 
         </main>

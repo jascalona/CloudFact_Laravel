@@ -43,3 +43,10 @@ Route::get('/Lgeneral', [App\Http\Controllers\ScreensController::class,'Lgeneral
 Route::resource('Lgenals', App\Http\Controllers\ScreensController::class)->names('Lgenal');
 
 Route::get('/LCustomer', [App\Http\Controllers\ScreensController::class,'LCustomer'])->name('LCustomer');
+
+
+/**ruta bill */
+Route::get('/bill', [App\Http\Controllers\ScreensController::class,'bill'])->name('bill');
+
+/**ruta install device new park */
+Route::get('/install', [App\Http\Controllers\ScreensController::class,'install'])->name('install');
