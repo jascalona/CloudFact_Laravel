@@ -27,7 +27,8 @@ Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index
  Route::resource('/customers',CustomerController::class)->names('customer');
 
 
- /**rutas de lecturas */
+
+ /**ruta lecturas */
  Route::get('/lead', [App\Http\Controllers\ScreensController::class,'lead'])->name('.lead');
 
 
@@ -39,3 +40,4 @@ Route::post('Lgeneral',[App\Http\Controllers\ImportController::class, 'import'])
  /**ruta lectura general */
 Route::get('/Lgeneral', [App\Http\Controllers\ScreensController::class,'Lgeneral'])->name(  'Lgeneral');
  
+Route::resource('Lgenals', App\Http\Controllers\ScreensController::class)->names('Lgenal');

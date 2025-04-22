@@ -93,7 +93,7 @@
                     <!--Estructura de park-->
                     <table id="myTable" class="display">
                         <thead>
-                            <tr>
+                            <tr style="font-size: 13px;">
                                 <th>Cliente</th>
                                 <th>RIF</th>
                                 <th>Serial</th>
@@ -114,7 +114,7 @@
                         <tbody>
 
                             @foreach ($parks as $row_park)
-                                <tr>
+                                <tr style="font-size: 12px;">
                                     <td>{{ $row_park->cliente }}</td>
                                     <td>{{ $row_park->rif }}</td>
                                     <td>{{ $row_park->serial }}</td>

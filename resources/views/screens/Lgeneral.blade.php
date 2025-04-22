@@ -110,8 +110,8 @@
                                                     <div class="advanced">
 
                                                         <!-- Button modal Activation-->
-                                                        <button type="button" class="btn btn-dark text-center" data-bs-toggle="modal"
-                                                            data-bs-target="#exampleModal">
+                                                        <button type="button" class="btn btn-dark text-center"
+                                                            data-bs-toggle="modal" data-bs-target="#exampleModal">
                                                             <i style="" class='bx bx-cog'></i>
                                                         </button>
                                                         <!-- Button modal Activation-->
@@ -137,7 +137,8 @@
                                                                         <p>Aquí puede descargar la Plantilla de Importación
                                                                             <a href="../BULK_LOAD_FILES_FOR_READING.csv"
                                                                                 data-bs-toggle="tooltip"
-                                                                                title="Tooltip">Descargar</a></p>
+                                                                                title="Tooltip">Descargar</a>
+                                                                        </p>
 
                                                                         <hr>
 
@@ -145,12 +146,13 @@
                                                                         <p>Realice la carga de lecturas através de un CSV.
                                                                         </p>
 
-                                                                        <form action="" method="post" enctype="multipart/form-data">
+                                                                        <form action="" method="post"
+                                                                            enctype="multipart/form-data">
                                                                             @csrf
                                                                             <div class="file-input text-center">
-                                                                                <input type="file" accept=".csv"
-                                                                                    name="file" id="file-input"
-                                                                                    class="form-control" required />
+                                                                                <input type="file" accept=".csv" name="file"
+                                                                                    id="file-input" class="form-control"
+                                                                                    required />
                                                                                 <label class="file-input__label"
                                                                                     for="file-input">
                                                                             </div>
@@ -244,12 +246,12 @@
                             {{ session('success') }}
                         </div>
                     @endif
-                    
+
 
                     <!--Estructura de park-->
                     <table id="myTable" class="display">
                         <thead>
-                            <tr>
+                            <tr style="font-size: 13px;">
                                 <th>Cliente</th>
                                 <th>RIF</th>
                                 <th>Serial</th>
@@ -262,22 +264,30 @@
                                 <th>Cont. Anterior Color</th>
                                 <th>Cont. Actual Color</th>
                                 <th>Volumen Color</th>
+                                <th>Cont. Anterior ScanImages</th>
+                                <th>Cont. Actual ScanImages</th>
                             </tr>
                         </thead>
                         <tbody>
+                            @foreach ($Lgenals as $row_Lgeneal)
+                                <tr style="font-size: 12px;">
+                                    <td>{{ $row_Lgeneal->cliente }}</td>
+                                    <td>{{ $row_Lgeneal->rif }}</td>
+                                    <td>{{ $row_Lgeneal->serial }}</td>
+                                    <td>{{ $row_Lgeneal->model }}</td>
+                                    <td>{{ $row_Lgeneal->location }}</td>
+                                    <td>{{ $row_Lgeneal->date }}</td>
+                                    <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
+                                    <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
+                                    <td>{{ $row_Lgeneal->volum_bn }}</td>
+                                    <td>{{ $row_Lgeneal->cont_ante_color }}</td>
+                                    <td>{{ $row_Lgeneal->cont_actu_color }}</td>
+                                    <td>{{ $row_Lgeneal->volum_color }}</td>
+                                    <td>{{ $row_Lgeneal->scanImages }}</td>
+                                    <td>{{ $row_Lgeneal->scanJobs }}</td>
 
-                            
-
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
-                            </tr>
-                            
-
+                                </tr>
+                            @endforeach
 
                         </tbody>
                     </table>

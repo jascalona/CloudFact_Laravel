@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Park;
+use App\Models\Lgenal;
 
 class ScreensController extends Controller
 {
@@ -27,8 +28,8 @@ class ScreensController extends Controller
 
     public function Lgeneral(){
         //$table = "load_reading";
-        
-        return view("screens.Lgeneral");
+        $Lgenals = Lgenal::all();
+        return view("screens.Lgeneral", compact("Lgenals"));
     }
 
 }
