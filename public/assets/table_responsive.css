@@ -2,7 +2,6 @@
 .container-table {
     max-width: 100%;
     margin: 0 auto;
-    background: #a4b4fa2f;
     backdrop-filter: blur(0.4rem);
     -webkit-backdrop-filter: blur(0.4rem);
     border-radius: 20px;
@@ -89,14 +88,12 @@ table tbody tr td {
 
 /*Filas Impares*/
 table tr:nth-child(odd) td {
-    background: #eef0f398;
     backdrop-filter: blur(0.4rem);
     -webkit-backdrop-filter: blur(0.4rem);
 }
 
 /*Filas Pares*/
 table tr:nth-child(even) td {
-    background: #cad4e398;
 }
 
 @media (max-width: 1240px) {

@@ -149,75 +149,77 @@
                     </div>
                     <!--GRAFICOS-->
 
+                    <!--TABLE ORDEN-->
+                    <div class="col-md-15 mb-lg-0 mb-4">
+                        <div class="card mt-4">
+                            <div class="card-header pb-0 p-3">
+                                <div class="row">
+                                    <div class="col-6 d-flex align-items-center">
+                                        <h4 class="mb-0">Customer's: <small>Park</small></h4>
+                                    </div>
 
-                    <div class="main p-5">
-
-                        <div class="container-table">
-
-                            <div class="head-t">
-                                <p>Customer's: <small>Park</small></p>
+                                    <div class="icons-pages col-6 text-end mb-3">
+                                        <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                                        <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                                    </div>
+                                </div>
                             </div>
 
+                            <div class="main p-5">
 
-                            <div class="icons-pages">
-                                <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
-                                <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
-                            </div><br>
-
-                            <div class="content-table">
-
-                                <!--Estructura de park-->
-                                <table id="myTable" class="display">
-                                    <thead>
-                                        <tr style="font-size: 13px;">
-                                            <th>Cliente</th>
-                                            <th>RIF</th>
-                                            <th>Serial</th>
-                                            <th>Modelo</th>
-                                            <th>Localidad</th>
-                                            <th>Ciudad</th>
-                                            <th>Estado</th>
-                                            <th>Fecha Insta.</th>
-                                            <th>Status</th>
-                                            <th>Cont. Insta. B/N</th>
-                                            <th>Cont. Insta. Color</th>
-                                            <th>Observacion</th>
-                                            <th>DOC</th>
-                                        </tr>
-                                    </thead>
-
-
-                                    <tbody>
-
-                                        @foreach ($parks as $row_park)
-                                            <tr style="font-size: 12px;">
-                                                <td>{{ $row_park->cliente }}</td>
-                                                <td>{{ $row_park->rif }}</td>
-                                                <td>{{ $row_park->serial }}</td>
-                                                <td>{{ $row_park->model }}</td>
-                                                <td>{{ $row_park->location }}</td>
-                                                <td>{{ $row_park->city }}</td>
-                                                <td>{{ $row_park->estado }}</td>
-                                                <td>{{ $row_park->date_insta }}</td>
-                                                <td>{{ $row_park->n_port }}</td>
-                                                <td>{{ $row_park->cont_insta_bn }}</td>
-                                                <td>{{ $row_park->cont_insta_color }}</td>
-                                                <td>{{ $row_park->obser }}</td>
-                                                <td>{{ $row_park->doc }}</td>
+                                <div class="content-table">
+                                    <table id="myTable" class="display">
+                                        <thead>
+                                            <tr style="font-size: 13px;">
+                                                <th>Cliente</th>
+                                                <th>RIF</th>
+                                                <th>Serial</th>
+                                                <th>Modelo</th>
+                                                <th>Localidad</th>
+                                                <th>Ciudad</th>
+                                                <th>Estado</th>
+                                                <th>Fecha Insta.</th>
+                                                <th>Status</th>
+                                                <th>Cont. Insta. B/N</th>
+                                                <th>Cont. Insta. Color</th>
+                                                <th>Observacion</th>
+                                                <th>DOC</th>
                                             </tr>
-                                        @endforeach
+                                        </thead>
+
+
+                                        <tbody>
+
+                                            @foreach ($parks as $row_park)
+                                                <tr style="font-size: 12px;">
+                                                    <td>{{ $row_park->cliente }}</td>
+                                                    <td>{{ $row_park->rif }}</td>
+                                                    <td>{{ $row_park->serial }}</td>
+                                                    <td>{{ $row_park->model }}</td>
+                                                    <td>{{ $row_park->location }}</td>
+                                                    <td>{{ $row_park->city }}</td>
+                                                    <td>{{ $row_park->estado }}</td>
+                                                    <td>{{ $row_park->date_insta }}</td>
+                                                    <td>{{ $row_park->n_port }}</td>
+                                                    <td>{{ $row_park->cont_insta_bn }}</td>
+                                                    <td>{{ $row_park->cont_insta_color }}</td>
+                                                    <td>{{ $row_park->obser }}</td>
+                                                    <td>{{ $row_park->doc }}</td>
+                                                </tr>
+                                            @endforeach
 
 
 
 
-                                    </tbody>
-                                </table>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
-
                         </div>
-                        <!--Estructura de park-->
-
                     </div>
+                    <!--TABLE ORDEN-->
+
+                    
 
                 </div>
 

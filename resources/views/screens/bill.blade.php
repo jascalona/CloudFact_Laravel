@@ -10,6 +10,7 @@
     <title>CloudFact-Lead</title>
 
     <!--STYLES-->
+    <link rel="stylesheet" href="{{ asset('assets/table_responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/setting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/bootstrap.css') }}">
@@ -26,8 +27,20 @@
     <!--STYLES-->
 
 </head>
+<script>
+    $(document).ready(function () {
+        $('#myTable').DataTable(
+            {
+                "language": {
+                    "url": "cdn.datatables.net/plug-ins/1.13.1/i18n/es-ES.json"
+                }
+            }
+        );
+    });
+</script>
 
 <body>
+
 
     @section('content')
 
@@ -76,7 +89,100 @@
                         </p>
                     </div>
                 </div>
+
+                <!--section create bill-->
+                <div class="col-md-12 mb-lg-0 mb-4">
+                    <div class="card mt-4">
+                        <div class="card-header pb-0 p-3">
+                            <div class="row">
+                                <div class="col-6 d-flex align-items-center">
+                                    <h6 class="mb-0">Generar Orden</h6>
+                                </div>
+                                <div class="col-6 text-end mb-3">
+                                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                            class='bx bx-plus'></i>&nbsp;&nbsp;Nueva Orden</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-body p-3">
+                            <div class="row">
+                                <div class="col-md-6 mb-md-0 mb-4">
+                                    <div
+                                        class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                        <img class="w-10 me-3 mb-0" src="../assets/img/logos/mastercard.png" alt="logo">
+                                        <h6 class="mb-0">
+                                            ****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
+                                        <i class="material-symbols-rounded ms-auto text-dark cursor-pointer"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div
+                                        class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
+                                        <img class="w-10 me-3 mb-0" src="../assets/img/logos/visa.png" alt="logo">
+                                        <h6 class="mb-0">
+                                            ****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;5248</h6>
+                                        <i class="material-symbols-rounded ms-auto text-dark cursor-pointer"
+                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!--section create bill-->
+
+                <!--TABLE ORDEN-->
+                <div class="col-md-15 mb-lg-0 mb-4">
+                    <div class="card mt-4">
+                        <div class="card-header pb-0 p-3">
+                            <div class="row">
+                                <div class="col-6 d-flex align-items-center">
+                                    <h4 class="mb-0">Resumen: <small>Ordenes</small></h4>
+                                </div>
+
+                                <div class="icons-pages col-6 text-end mb-3">
+                                    <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                                    <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main p-5">
+
+                            <div class="content-table">
+                                <table id="myTable" class="display">
+                                    <thead>
+                                        <tr>
+                                            <th>Column 1</th>
+                                            <th>Column 2</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Row 1 Data 1</td>
+                                            <td>Row 1 Data 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Row 2 Data 1</td>
+                                            <td>Row 2 Data 2</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--TABLE ORDEN-->
+
+
             </div>
+
+
+
+
 
             <footer class="footer py-4  ">
                 <div class="container-fluid">

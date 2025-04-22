@@ -221,9 +221,9 @@
                                             <h6 class="mb-3">Resumen de Facturas</h6>
                                         </div>
                                         <!--
-                                                                                                                        <div class="col-6 text-end">
-                                                                                                                            <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
-                                                                                                                        </div> -->
+                                                                                                                                            <div class="col-6 text-end">
+                                                                                                                                                <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
+                                                                                                                                            </div> -->
                                     </div>
                                 </div>
                                 <div class="card-body p-3 pb-0">
@@ -390,7 +390,6 @@
 
                     </div>
 
-                    <div class="main p-5">
 
                         @if (session('success'))
                             <div class="alert alert-success" role="aler">
@@ -398,75 +397,78 @@
                             </div>
                         @endif
 
+                        <!--TABLE ORDEN-->
+                        <div class="col-md-15 mb-lg-0 mb-4">
+                            <div class="card mt-4">
+                                <div class="card-header pb-0 p-3">
+                                    <div class="row">
+                                        <div class="col-6 d-flex align-items-center">
+                                            <h4 class="mb-0">Customer's: <small>Lead</small></h4>
+                                        </div>
 
-                        <div class="container-table">
+                                        <div class="icons-pages col-6 text-end mb-3">
+                                            <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                                            <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <div class="head-t">
-                                <p>Customer's: <small>Lead</small></p>
+                                <!--TABLE ORDEN-->
+                                <div class="main p-5">
 
+                                    <div class="content-table">
+                                        <table id="myTable" class="display">
+                                            <thead>
+                                                <tr style="font-size: 13px;">
+                                                    <th>Cliente</th>
+                                                    <th>RIF</th>
+                                                    <th>Serial</th>
+                                                    <th>Modelo</th>
+                                                    <th>Localidad</th>
+                                                    <th>Date</th>
+                                                    <th>Cont. Anterior B/N</th>
+                                                    <th>Cont. Actual B/N</th>
+                                                    <th>Volumen B/N</th>
+                                                    <th>Cont. Anterior Color</th>
+                                                    <th>Cont. Actual Color</th>
+                                                    <th>Volumen Color</th>
+                                                    <th>Cont. Anterior ScanImages</th>
+                                                    <th>Cont. Actual ScanImages</th>
+                                                    <th>Cont. Anterior ScanJobs</th>
+                                                    <th>Cont. Actual ScanJobs</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                @foreach ($Lgenals as $row_Lgeneal)
+                                                    <tr style="font-size: 12px;">
+                                                        <td>{{ $row_Lgeneal->cliente }}</td>
+                                                        <td>{{ $row_Lgeneal->rif }}</td>
+                                                        <td>{{ $row_Lgeneal->serial }}</td>
+                                                        <td>{{ $row_Lgeneal->model }}</td>
+                                                        <td>{{ $row_Lgeneal->location }}</td>
+                                                        <td>{{ $row_Lgeneal->date }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
+                                                        <td>{{ $row_Lgeneal->volum_bn }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_ante_color }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_actu_color }}</td>
+                                                        <td>{{ $row_Lgeneal->volum_color }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
+                                                        <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
+
+                                                    </tr>
+                                                @endforeach
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
                             </div>
-
-
-                            <div class="icons-pages">
-                                    <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
-                                    <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
-                            </div><br>
-
-                            <div class="content-table">
-
-                                <!--Estructura de park-->
-                                <table id="myTable" class="display">
-                                    <thead>
-                                        <tr style="font-size: 13px;">
-                                            <th>Cliente</th>
-                                            <th>RIF</th>
-                                            <th>Serial</th>
-                                            <th>Modelo</th>
-                                            <th>Localidad</th>
-                                            <th>Date</th>
-                                            <th>Cont. Anterior B/N</th>
-                                            <th>Cont. Actual B/N</th>
-                                            <th>Volumen B/N</th>
-                                            <th>Cont. Anterior Color</th>
-                                            <th>Cont. Actual Color</th>
-                                            <th>Volumen Color</th>
-                                            <th>Cont. Anterior ScanImages</th>
-                                            <th>Cont. Actual ScanImages</th>
-                                            <th>Cont. Anterior ScanJobs</th>
-                                            <th>Cont. Actual ScanJobs</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        @foreach ($Lgenals as $row_Lgeneal)
-                                            <tr style="font-size: 12px;">
-                                                <td>{{ $row_Lgeneal->cliente }}</td>
-                                                <td>{{ $row_Lgeneal->rif }}</td>
-                                                <td>{{ $row_Lgeneal->serial }}</td>
-                                                <td>{{ $row_Lgeneal->model }}</td>
-                                                <td>{{ $row_Lgeneal->location }}</td>
-                                                <td>{{ $row_Lgeneal->date }}</td>
-                                                <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
-                                                <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
-                                                <td>{{ $row_Lgeneal->volum_bn }}</td>
-                                                <td>{{ $row_Lgeneal->cont_ante_color }}</td>
-                                                <td>{{ $row_Lgeneal->cont_actu_color }}</td>
-                                                <td>{{ $row_Lgeneal->volum_color }}</td>
-                                                <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
-                                                <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
-                                                <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
-                                                <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
-
-                                            </tr>
-                                        @endforeach
-
-                                    </tbody>
-                                </table>
-                            </div>
-
                         </div>
-                        <!--Estructura de park-->
+                        <!--TABLE ORDEN-->
 
-                    </div>
 
                 </div>
 
