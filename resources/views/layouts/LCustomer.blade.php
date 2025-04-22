@@ -128,6 +128,7 @@
                                     </div>
                                 </div>
 
+                                <!--PRECIO SCAN-->
                                 <div class="col-xl-6">
                                     <div class="row">
                                         <div class="col-md-6 col-6">
@@ -135,39 +136,41 @@
                                                 <div class="card-header mx-4 p-3 text-center">
                                                     <div
                                                         class="icon icon-shape icon-lg bg-gradient-dark shadow text-center border-radius-lg">
-                                                        <i class="material-symbols-rounded opacity-10">account_balance</i>
+                                                        <i class='bx bx-coin-stack'></i>
                                                     </div>
                                                 </div>
                                                 <div class="card-body pt-0 p-3 text-center">
-                                                    <h6 class="text-center mb-0">Salary</h6>
-                                                    <span class="text-xs">Belong Interactive</span>
+                                                    <h6 class="text-center mb-0">Precio Bs</h6>
+                                                    <span class="text-xs">Precio por Click Bs.</span>
                                                     <hr class="horizontal dark my-3">
-                                                    <h5 class="mb-0">+$2000</h5>
+                                                    <h5 class="mb-0">$0</h5>
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="col-md-6 col-6">
                                             <div class="card">
                                                 <div class="card-header mx-4 p-3 text-center">
                                                     <div
                                                         class="icon icon-shape icon-lg bg-gradient-dark shadow text-center border-radius-lg">
-                                                        <i
-                                                            class="material-symbols-rounded opacity-10">account_balance_wallet</i>
+                                                        <i class='bx bx-dollar'></i>
                                                     </div>
                                                 </div>
                                                 <div class="card-body pt-0 p-3 text-center">
-                                                    <h6 class="text-center mb-0">Paypal</h6>
-                                                    <span class="text-xs">Freelance Payment</span>
+                                                    <h6 class="text-center mb-0">Precio $</h6>
+                                                    <span class="text-xs">Precio por Click USD.</span>
                                                     <hr class="horizontal dark my-3">
-                                                    <h5 class="mb-0">$455.00</h5>
+                                                    <h5 class="mb-0">$0</h5>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
+                                <!--PRECIO SCAN-->
+
                             </div>
 
+                            <!--GRAFICOS-->
                             <div class="row">
                                 <div class="col-lg-6 col-md-6 mt-4 mb-4">
                                     <div class="card">
@@ -202,11 +205,14 @@
                                         </div>
                                     </div>
                                 </div>
+                                <!--GRAFICOS-->
+
 
                             </div>
 
                         </div>
 
+                        <!--RESUMEN FACTURACION-->
                         <div class="col-lg-4">
                             <div class="card h-100">
                                 <div class="card-header pb-0 p-3">
@@ -215,9 +221,9 @@
                                             <h6 class="mb-3">Resumen de Facturas</h6>
                                         </div>
                                         <!--
-                                                    <div class="col-6 text-end">
-                                                        <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
-                                                    </div> -->
+                                                                                        <div class="col-6 text-end">
+                                                                                            <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
+                                                                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="card-body p-3 pb-0">
@@ -290,72 +296,165 @@
                                 </div>
                             </div>
                         </div>
+                        <!--RESUMEN FACTURACION-->
 
-                        <div class="main p-5">
-
-                            @if (session('success'))
-                                <div class="alert alert-success" role="aler">
-                                    {{ session('success') }}
+                        <!--CARD FOR PRECIO-->
+                        <div class="col-xl-3 col-sm-6 mb-xl-0 mt-5 mb-4">
+                            <div class="card">
+                                <div class="card-header p-2 ps-3">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="text-sm mb-0 text-capitalize">Precion B/N $</p>
+                                            <h4 class="mb-0">0.0241</h4>
+                                        </div>
+                                        <div
+                                            class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                            <i class='bx bxs-color-fill'></i>
+                                        </div>
+                                    </div>
                                 </div>
-                            @endif
-
-
-                            <!--Estructura de park-->
-                            <table id="myTable" class="display">
-                                <thead>
-                                    <tr style="font-size: 13px;">
-                                        <th>Cliente</th>
-                                        <th>RIF</th>
-                                        <th>Serial</th>
-                                        <th>Modelo</th>
-                                        <th>Localidad</th>
-                                        <th>Date</th>
-                                        <th>Cont. Anterior B/N</th>
-                                        <th>Cont. Actual B/N</th>
-                                        <th>Volumen B/N</th>
-                                        <th>Cont. Anterior Color</th>
-                                        <th>Cont. Actual Color</th>
-                                        <th>Volumen Color</th>
-                                        <th>Cont. Anterior ScanImages</th>
-                                        <th>Cont. Actual ScanImages</th>
-                                        <th>Cont. Anterior ScanJobs</th>
-                                        <th>Cont. Actual ScanJobs</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach ($Lgenals as $row_Lgeneal)
-                                        <tr style="font-size: 12px;">
-                                            <td>{{ $row_Lgeneal->cliente }}</td>
-                                            <td>{{ $row_Lgeneal->rif }}</td>
-                                            <td>{{ $row_Lgeneal->serial }}</td>
-                                            <td>{{ $row_Lgeneal->model }}</td>
-                                            <td>{{ $row_Lgeneal->location }}</td>
-                                            <td>{{ $row_Lgeneal->date }}</td>
-                                            <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
-                                            <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
-                                            <td>{{ $row_Lgeneal->volum_bn }}</td>
-                                            <td>{{ $row_Lgeneal->cont_ante_color }}</td>
-                                            <td>{{ $row_Lgeneal->cont_actu_color }}</td>
-                                            <td>{{ $row_Lgeneal->volum_color }}</td>
-                                            <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
-                                            <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
-                                            <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
-                                            <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
-
-                                        </tr>
-                                    @endforeach
-
-                                </tbody>
-                            </table>
-                            <!--Estructura de park-->
-
+                                <hr class="dark horizontal my-0">
+                                <div class="card-footer p-2 ps-3">
+                                    <p class="mb-0 text-sm"><small>Precio por Click B/N USD.</small></p>
+                                </div>
+                            </div>
                         </div>
+
+                        <div class="col-xl-3 col-sm-6 mb-xl-0 mt-5 mb-4">
+                            <div class="card">
+                                <div class="card-header p-2 ps-3">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="text-sm mb-0 text-capitalize">Precion B/N Bs</p>
+                                            <h4 class="mb-0">0.125</h4>
+                                        </div>
+                                        <div
+                                            class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                            <i class='bx bxs-color-fill'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="dark horizontal my-0">
+                                <div class="card-footer p-2 ps-3">
+                                    <p class="mb-0 text-sm"><small>Precio por Click B/N Bs.</small></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-sm-6 mb-xl-0 mt-5 mb-4">
+                            <div class="card">
+                                <div class="card-header p-2 ps-3">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="text-sm mb-0 text-capitalize">Precio Color $</p>
+                                            <h4 class="mb-0">1.55</h4>
+                                        </div>
+                                        <div
+                                            class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                            <i class='bx bxs-color-fill' style='color:#0ae089'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="dark horizontal my-0">
+                                <div class="card-footer p-2 ps-3">
+                                    <p class="mb-0 text-sm"><small>Precio por Click Color USD.</small></p>
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-3 col-sm-6 mt-5">
+                            <div class="card">
+                                <div class="card-header p-2 ps-3">
+                                    <div class="d-flex justify-content-between">
+                                        <div>
+                                            <p class="text-sm mb-0 text-capitalize">Precio Color Bs</p>
+                                            <h4 class="mb-0">8.03</h4>
+                                        </div>
+                                        <div
+                                            class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
+                                            <i class='bx bxs-color-fill' style='color:#0ae089'></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <hr class="dark horizontal my-0">
+                                <div class="card-footer p-2 ps-3">
+                                    <p class="mb-0 text-sm"><small>Precio por Click Color Bs.</small></p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!--CARD FOR PRECIO-->
+
 
                     </div>
 
+                    <div class="main p-5">
 
+                        @if (session('success'))
+                            <div class="alert alert-success" role="aler">
+                                {{ session('success') }}
+                            </div>
+                        @endif
+
+
+                        <!--Estructura de park-->
+                        <table id="myTable" class="display">
+                            <thead>
+                                <tr style="font-size: 13px;">
+                                    <th>Cliente</th>
+                                    <th>RIF</th>
+                                    <th>Serial</th>
+                                    <th>Modelo</th>
+                                    <th>Localidad</th>
+                                    <th>Date</th>
+                                    <th>Cont. Anterior B/N</th>
+                                    <th>Cont. Actual B/N</th>
+                                    <th>Volumen B/N</th>
+                                    <th>Cont. Anterior Color</th>
+                                    <th>Cont. Actual Color</th>
+                                    <th>Volumen Color</th>
+                                    <th>Cont. Anterior ScanImages</th>
+                                    <th>Cont. Actual ScanImages</th>
+                                    <th>Cont. Anterior ScanJobs</th>
+                                    <th>Cont. Actual ScanJobs</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach ($Lgenals as $row_Lgeneal)
+                                    <tr style="font-size: 12px;">
+                                        <td>{{ $row_Lgeneal->cliente }}</td>
+                                        <td>{{ $row_Lgeneal->rif }}</td>
+                                        <td>{{ $row_Lgeneal->serial }}</td>
+                                        <td>{{ $row_Lgeneal->model }}</td>
+                                        <td>{{ $row_Lgeneal->location }}</td>
+                                        <td>{{ $row_Lgeneal->date }}</td>
+                                        <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
+                                        <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
+                                        <td>{{ $row_Lgeneal->volum_bn }}</td>
+                                        <td>{{ $row_Lgeneal->cont_ante_color }}</td>
+                                        <td>{{ $row_Lgeneal->cont_actu_color }}</td>
+                                        <td>{{ $row_Lgeneal->volum_color }}</td>
+                                        <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
+                                        <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
+                                        <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
+                                        <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
+
+                                    </tr>
+                                @endforeach
+
+                            </tbody>
+                        </table>
+                        <!--Estructura de park-->
+
+                    </div>
 
                 </div>
+
+
+
+            </div>
 
 
 
