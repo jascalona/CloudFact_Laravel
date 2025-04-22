@@ -41,3 +41,5 @@ Route::post('Lgeneral',[App\Http\Controllers\ImportController::class, 'import'])
 Route::get('/Lgeneral', [App\Http\Controllers\ScreensController::class,'Lgeneral'])->name(  'Lgeneral');
  
 Route::resource('Lgenals', App\Http\Controllers\ScreensController::class)->names('Lgenal');
+
+Route::get('/LCustomer', [App\Http\Controllers\ScreensController::class,'LCustomer'])->name('LCustomer');

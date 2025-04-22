@@ -32,4 +32,9 @@ class ScreensController extends Controller
         return view("screens.Lgeneral", compact("Lgenals"));
     }
 
+    public function LCustomer(){
+        $Lgenals = Lgenal::all();
+        return view("layouts.LCustomer", compact("Lgenals"));
+    }
+
 }

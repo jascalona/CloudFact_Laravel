@@ -83,7 +83,7 @@
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="row">
-                               
+
                                 <div class="col-md-12 mb-lg-0 mb-4">
                                     <div class="card">
                                         <div class="card-header pb-0 p-3">
@@ -92,7 +92,8 @@
                                                     <h4 class="mb-0">Informe Detallado Global</h4>
                                                 </div>
                                                 <div class="col-6 mb-2 text-end">
-                                                    <a class="btn bg-gradient-dark mb-0" href="{{ route('Lgeneral') }}"><i class='bx bxs-book-open'></i></a>
+                                                    <a class="btn bg-gradient-dark mb-0" href="{{ route('Lgeneral') }}"><i
+                                                            class='bx bxs-book-open'></i></a>
                                                 </div>
                                             </div>
                                         </div>
@@ -106,11 +107,12 @@
                                                         <h6 class="mb-0">
                                                             Total de CLientes: 52
                                                         </h6>
-                                                        <i style="font-size: 20px" class="bx bx-group ms-auto text-dark cursor-pointer"
+                                                        <i style="font-size: 20px"
+                                                            class="bx bx-group ms-auto text-dark cursor-pointer"
                                                             data-bs-toggle="tooltip" data-bs-placement="top"></i>
                                                     </div>
                                                 </div>
-                                                
+
                                             </div>
                                         </div>
                                     </div>
@@ -145,7 +147,7 @@
                                 <div class="card-footer p-2 ps-3">
                                     <p class="mb-0 text-sm">Equipos: <span
                                             class="text-success font-weight-bolder">{{ $row->cant_device }} </span></p>
-                                    <span><a href="">Detalles</a></span>
+                                    <span><a href="{{ route('LCustomer') }}">Detalles</a></span>
                                 </div>
                             </div>
                         </div>
@@ -154,14 +156,7 @@
                     @endforeach
                 </div>
 
-
-
-
-
             </div>
-
-
-
 
             </div>
 
