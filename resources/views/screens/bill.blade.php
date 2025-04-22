@@ -110,21 +110,77 @@
                                 <div class="col-md-6 mb-md-0 mb-4">
                                     <div
                                         class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                                        <img class="w-10 me-3 mb-0" src="../assets/img/logos/mastercard.png" alt="logo">
-                                        <h6 class="mb-0">
-                                            ****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;7852</h6>
-                                        <i class="material-symbols-rounded ms-auto text-dark cursor-pointer"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
+
+                                        <select class="form-select form-select-lg mb-3" aria-label="Large select example">
+                                            <option selected>Seleccione un Cliente</option>
+                                            <option value="1">nameCliente</option>
+                                        </select>
                                     </div>
                                 </div>
+
                                 <div class="col-md-6">
                                     <div
-                                        class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
-                                        <img class="w-10 me-3 mb-0" src="../assets/img/logos/visa.png" alt="logo">
-                                        <h6 class="mb-0">
-                                            ****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;****&nbsp;&nbsp;&nbsp;5248</h6>
-                                        <i class="material-symbols-rounded ms-auto text-dark cursor-pointer"
-                                            data-bs-toggle="tooltip" data-bs-placement="top" title="Edit Card">edit</i>
+                                        class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
+                                        <!--form auto completado-->
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text" id="basic-addon1">@</span>
+                                            <input type="text" class="form-control" placeholder="RIF"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Localidad"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Persona de Contacto"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Email"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Movil"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <div class="mb-3">
+                                            <label for="basic-url" class="form-label">Your vanity URL</label>
+                                            <div class="input-group">
+                                                <span class="input-group-text"
+                                                    id="basic-addon3">https://example.com/users/</span>
+                                                <input type="text" class="form-control" id="basic-url"
+                                                    aria-describedby="basic-addon3 basic-addon4">
+                                            </div>
+                                            <div class="form-text" id="basic-addon4">Example help text goes outside the
+                                                input group.</div>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <span class="input-group-text">$</span>
+                                            <input type="text" class="form-control"
+                                                aria-label="Amount (to the nearest dollar)">
+                                            <span class="input-group-text">.00</span>
+                                        </div>
+
+                                        <div class="input-group mb-3">
+                                            <input type="text" class="form-control" placeholder="Username"
+                                                aria-label="Username">
+                                            <span class="input-group-text">@</span>
+                                            <input type="text" class="form-control" placeholder="Server"
+                                                aria-label="Server">
+                                        </div>
+
+                                        <div class="input-group">
+                                            <span class="input-group-text">With textarea</span>
+                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                        </div>
+                                        <!--form auto completado-->
                                     </div>
                                 </div>
                             </div>
