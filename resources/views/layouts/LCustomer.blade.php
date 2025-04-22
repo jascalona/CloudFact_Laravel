@@ -10,6 +10,7 @@
     <title>CloudFact-Lead</title>
 
     <!--STYLES-->
+    <link rel="stylesheet" href="{{ asset('assets/table_responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/setting.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/bootstrap.css') }}">
@@ -18,13 +19,12 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
 
+    <script src="{{ asset('js/scroller_tables.js') }}"></script>
     <script src="{{ asset('js/material-dashboard.js') }}"></script>
     <script src="{{ asset('js/material-dashboard.js.map') }}"></script>
     <script src="{{ asset('js/material-dashboard.min.js') }}"></script>
     <script src="{{ asset('js/plugins/chartjs.min.js') }}"></script>
     <script src="{{ asset('js/plugins/Chart.extension.js') }}"></script>
-
-
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
@@ -45,7 +45,7 @@
     });
 </script>
 
-<body>
+<body style="background-color: rgba(208, 218, 237, 0.296);">
 
     @section('content')
         <main class="main-content position-relative">
@@ -221,9 +221,9 @@
                                             <h6 class="mb-3">Resumen de Facturas</h6>
                                         </div>
                                         <!--
-                                                                                        <div class="col-6 text-end">
-                                                                                            <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
-                                                                                        </div> -->
+                                                                                                        <div class="col-6 text-end">
+                                                                                                            <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
+                                                                                                        </div> -->
                                     </div>
                                 </div>
                                 <div class="card-body p-3 pb-0">
@@ -399,53 +399,84 @@
                         @endif
 
 
-                        <!--Estructura de park-->
-                        <table id="myTable" class="display">
-                            <thead>
-                                <tr style="font-size: 13px;">
-                                    <th>Cliente</th>
-                                    <th>RIF</th>
-                                    <th>Serial</th>
-                                    <th>Modelo</th>
-                                    <th>Localidad</th>
-                                    <th>Date</th>
-                                    <th>Cont. Anterior B/N</th>
-                                    <th>Cont. Actual B/N</th>
-                                    <th>Volumen B/N</th>
-                                    <th>Cont. Anterior Color</th>
-                                    <th>Cont. Actual Color</th>
-                                    <th>Volumen Color</th>
-                                    <th>Cont. Anterior ScanImages</th>
-                                    <th>Cont. Actual ScanImages</th>
-                                    <th>Cont. Anterior ScanJobs</th>
-                                    <th>Cont. Actual ScanJobs</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($Lgenals as $row_Lgeneal)
-                                    <tr style="font-size: 12px;">
-                                        <td>{{ $row_Lgeneal->cliente }}</td>
-                                        <td>{{ $row_Lgeneal->rif }}</td>
-                                        <td>{{ $row_Lgeneal->serial }}</td>
-                                        <td>{{ $row_Lgeneal->model }}</td>
-                                        <td>{{ $row_Lgeneal->location }}</td>
-                                        <td>{{ $row_Lgeneal->date }}</td>
-                                        <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
-                                        <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
-                                        <td>{{ $row_Lgeneal->volum_bn }}</td>
-                                        <td>{{ $row_Lgeneal->cont_ante_color }}</td>
-                                        <td>{{ $row_Lgeneal->cont_actu_color }}</td>
-                                        <td>{{ $row_Lgeneal->volum_color }}</td>
-                                        <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
-                                        <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
-                                        <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
-                                        <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
+                        <script>
+                            const btnright = document.getElementById("scroll-button-right");
+                            const btnleft = document.getElementById("scroll-button-left");
 
-                                    </tr>
-                                @endforeach
 
-                            </tbody>
-                        </table>
+                            const content = document.querySelector(".content-table");
+
+                            //Funtion click
+                            btnright.addEventListener("click", () => {
+                                content.scrollLeft += 800;
+                            });
+
+                            btnleft.addEventListener("click", () => {
+                                content.scrollLeft -= 800;
+                            });
+                        </script>
+
+                        <div class="container-table">
+
+                            <div class="icons-pages">
+                                <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                                <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                            </div>
+                            <br>
+
+                            <div class="content-table">
+
+
+                                <!--Estructura de park-->
+                                <table id="myTable" class="display">
+                                    <thead>
+                                        <tr style="font-size: 13px;">
+                                            <th>Cliente</th>
+                                            <th>RIF</th>
+                                            <th>Serial</th>
+                                            <th>Modelo</th>
+                                            <th>Localidad</th>
+                                            <th>Date</th>
+                                            <th>Cont. Anterior B/N</th>
+                                            <th>Cont. Actual B/N</th>
+                                            <th>Volumen B/N</th>
+                                            <th>Cont. Anterior Color</th>
+                                            <th>Cont. Actual Color</th>
+                                            <th>Volumen Color</th>
+                                            <th>Cont. Anterior ScanImages</th>
+                                            <th>Cont. Actual ScanImages</th>
+                                            <th>Cont. Anterior ScanJobs</th>
+                                            <th>Cont. Actual ScanJobs</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        @foreach ($Lgenals as $row_Lgeneal)
+                                            <tr style="font-size: 12px;">
+                                                <td>{{ $row_Lgeneal->cliente }}</td>
+                                                <td>{{ $row_Lgeneal->rif }}</td>
+                                                <td>{{ $row_Lgeneal->serial }}</td>
+                                                <td>{{ $row_Lgeneal->model }}</td>
+                                                <td>{{ $row_Lgeneal->location }}</td>
+                                                <td>{{ $row_Lgeneal->date }}</td>
+                                                <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
+                                                <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
+                                                <td>{{ $row_Lgeneal->volum_bn }}</td>
+                                                <td>{{ $row_Lgeneal->cont_ante_color }}</td>
+                                                <td>{{ $row_Lgeneal->cont_actu_color }}</td>
+                                                <td>{{ $row_Lgeneal->volum_color }}</td>
+                                                <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
+                                                <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
+                                                <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
+                                                <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
+
+                                            </tr>
+                                        @endforeach
+
+                                    </tbody>
+                                </table>
+                            </div>
+
+                        </div>
                         <!--Estructura de park-->
 
                     </div>

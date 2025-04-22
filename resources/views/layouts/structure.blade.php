@@ -20,7 +20,7 @@
     <!-- Scripts -->
 </head>
 
-<body>
+<body style="background-color: rgba(208, 218, 237, 0.296);">
 
 
     <aside class="sidenav navbar navbar-vertical navbar-expand-xs border-radius-lg fixed-start ms-2  bg-white my-2"
