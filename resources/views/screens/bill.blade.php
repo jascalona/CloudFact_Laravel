@@ -115,6 +115,45 @@
                                             <option selected>Seleccione un Cliente</option>
                                             <option value="1">nameCliente</option>
                                         </select>
+                                    </div><br>
+
+                                    <div class="col-md-">
+                                        <div
+                                            class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
+                                            <!--form auto completado-->
+                                            <div class="input-group mb-3">
+                                                <span class="input-group-text" id="basic-addon1">@</span>
+                                                <input type="text" class="form-control" placeholder="RIF"
+                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Direccion Fiscal"
+                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Ciudad"
+                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Persona de Contacto"
+                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Email"
+                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                            </div>
+
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Movil"
+                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                            </div><br>
+
+                                            <!--form auto completado-->
+                                        </div>
                                     </div>
                                 </div>
 
@@ -122,44 +161,28 @@
                                     <div
                                         class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
                                         <!--form auto completado-->
+                                        <div class="form-text" id="basic-addon4">Emision de Factura</div>
                                         <div class="input-group mb-3">
-                                            <span class="input-group-text" id="basic-addon1">@</span>
-                                            <input type="text" class="form-control" placeholder="RIF"
+                                            <input type="date" class="form-control" placeholder="Emision"
                                                 aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Localidad"
-                                                aria-label="Username" aria-describedby="basic-addon1">
-                                        </div>
-
-
-                                        <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Persona de Contacto"
+                                            <input type="text" class="form-control" placeholder="Tipo de Contrato"
                                                 aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Email"
+                                            <input type="text" class="form-control" placeholder="N# Contrato"
                                                 aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Movil"
+                                            <input type="text" class="form-control" placeholder="N# Factura"
                                                 aria-label="Username" aria-describedby="basic-addon1">
                                         </div>
 
-                                        <div class="mb-3">
-                                            <label for="basic-url" class="form-label">Your vanity URL</label>
-                                            <div class="input-group">
-                                                <span class="input-group-text"
-                                                    id="basic-addon3">https://example.com/users/</span>
-                                                <input type="text" class="form-control" id="basic-url"
-                                                    aria-describedby="basic-addon3 basic-addon4">
-                                            </div>
-                                            <div class="form-text" id="basic-addon4">Example help text goes outside the
-                                                input group.</div>
-                                        </div>
+
 
                                         <div class="input-group mb-3">
                                             <span class="input-group-text">$</span>
