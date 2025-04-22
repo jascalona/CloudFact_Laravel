@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ImportController;
+use App\Http\Controllers\ParkController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
 
@@ -19,7 +20,9 @@ Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index
  * Declaracion de rutas
  */
 
+  /**ruta park */
  Route::get('/park', [App\Http\Controllers\ScreensController::class, 'park'])->name('.park');
+ Route::resource('/parks', App\Http\Controllers\ScreensController::class)->names('park');
 
  Route::resource('/customers',CustomerController::class)->names('customer');
 

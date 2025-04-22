@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Customer;
+use App\Models\Park;
 
 class ScreensController extends Controller
 {
@@ -11,9 +12,12 @@ class ScreensController extends Controller
      * CRATION ROUTES SCREENS
      */
 
-     public function park(){
-        return view("screens.park");
-     }
+     public function Park(){
+        $parks = Park::all();
+        
+        //return  $parks;
+        return view("screens.park",compact("parks"));
+    }
 
      public function lead(){
 

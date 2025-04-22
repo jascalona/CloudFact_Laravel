@@ -30,7 +30,7 @@
         $('#myTable').DataTable(
             {
                 "language": {
-                    "url": "//cdn.datatables.net/plug-ins/1.13.1/i18n/es-ES.json"
+                    "url": "cdn.datatables.net/plug-ins/1.13.1/i18n/es-ES.json"
                 }
             }
         );
@@ -94,19 +94,46 @@
                     <table id="myTable" class="display">
                         <thead>
                             <tr>
-                                <th>Column 1</th>
-                                <th>Column 2</th>
+                                <th>Cliente</th>
+                                <th>RIF</th>
+                                <th>Serial</th>
+                                <th>Modelo</th>
+                                <th>Localidad</th>
+                                <th>Ciudad</th>
+                                <th>Estado</th>
+                                <th>Fecha Insta.</th>
+                                <th>Status</th>
+                                <th>Cont. Insta. B/N</th>
+                                <th>Cont. Insta. Color</th>
+                                <th>Observacion</th>
+                                <th>DOC</th>
                             </tr>
                         </thead>
+
+
                         <tbody>
-                            <tr>
-                                <td>Row 1 Data 1</td>
-                                <td>Row 1 Data 2</td>
-                            </tr>
-                            <tr>
-                                <td>Row 2 Data 1</td>
-                                <td>Row 2 Data 2</td>
-                            </tr>
+
+                            @foreach ($parks as $row_park)
+                                <tr>
+                                    <td>{{ $row_park->cliente }}</td>
+                                    <td>{{ $row_park->rif }}</td>
+                                    <td>{{ $row_park->serial }}</td>
+                                    <td>{{ $row_park->model }}</td>
+                                    <td>{{ $row_park->location }}</td>
+                                    <td>{{ $row_park->city }}</td>
+                                    <td>{{ $row_park->estado }}</td>
+                                    <td>{{ $row_park->date_insta }}</td>
+                                    <td>{{ $row_park->n_port }}</td>
+                                    <td>{{ $row_park->cont_insta_bn }}</td>
+                                    <td>{{ $row_park->cont_insta_color }}</td>
+                                    <td>{{ $row_park->obser }}</td>
+                                    <td>{{ $row_park->doc }}</td>
+                                </tr>
+                            @endforeach
+
+
+
+
                         </tbody>
                     </table>
                     <!--Estructura de park-->

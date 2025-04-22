@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Imports\DataImport;
+use App\Models\Lgenal;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -10,6 +11,7 @@ use Maatwebsite\Excel\Facades\Excel;
 
 class ImportController extends Controller
 {
+
     public function form()
     {
         return view("screens.Lgeneral");
@@ -20,8 +22,6 @@ class ImportController extends Controller
         /**validation */
         $file = $request->file('file');
         Excel::import(new DataImport, $file);
-
-        
 
         /**SHOW ALERT FOR QUERY */
         return redirect()->back()->with('success','Los registros fueron cargados con Exito!');

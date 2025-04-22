@@ -250,11 +250,24 @@
                     <table id="myTable" class="display">
                         <thead>
                             <tr>
-                                <th>Column 1</th>
-                                <th>Column 2</th>
+                                <th>Cliente</th>
+                                <th>RIF</th>
+                                <th>Serial</th>
+                                <th>Modelo</th>
+                                <th>Localidad</th>
+                                <th>Date</th>
+                                <th>Cont. Anterior B/N</th>
+                                <th>Cont. Actual B/N</th>
+                                <th>Volumen B/N</th>
+                                <th>Cont. Anterior Color</th>
+                                <th>Cont. Actual Color</th>
+                                <th>Volumen Color</th>
                             </tr>
                         </thead>
                         <tbody>
+
+                            
+
                             <tr>
                                 <td>Row 1 Data 1</td>
                                 <td>Row 1 Data 2</td>
@@ -263,6 +276,9 @@
                                 <td>Row 2 Data 1</td>
                                 <td>Row 2 Data 2</td>
                             </tr>
+                            
+
+
                         </tbody>
                     </table>
                     <!--Estructura de park-->
