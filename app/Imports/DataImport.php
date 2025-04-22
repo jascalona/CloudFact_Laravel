@@ -28,8 +28,11 @@ class DataImport implements ToCollection, WithHeadingRow, WithValidation
                 'cont_ante_color' => $row['cont_ante_color'],
                 'cont_actu_color' => $row['cont_actu_color'],
                 'volum_color' => $row['volum_color'],
-                'scanImages' => $row['scan_images'],
-                'scanJobs' => $row['scan_jobs'],
+                'cont_ante_scan_images' => $row['cont_ante_scan_images'],
+                'cont_actu_scan_images' => $row['cont_actu_scan_images'],
+                'cont_ante_scan_jobs' => $row['cont_ante_scan_jobs'],
+                'cont_actu_scan_jobs' => $row['cont_actu_scan_jobs'],
+
             ]);
         }
 

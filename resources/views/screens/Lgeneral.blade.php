@@ -266,6 +266,8 @@
                                 <th>Volumen Color</th>
                                 <th>Cont. Anterior ScanImages</th>
                                 <th>Cont. Actual ScanImages</th>
+                                <th>Cont. Anterior ScanJobs</th>
+                                <th>Cont. Actual ScanJobs</th>
                             </tr>
                         </thead>
                         <tbody>
@@ -283,8 +285,10 @@
                                     <td>{{ $row_Lgeneal->cont_ante_color }}</td>
                                     <td>{{ $row_Lgeneal->cont_actu_color }}</td>
                                     <td>{{ $row_Lgeneal->volum_color }}</td>
-                                    <td>{{ $row_Lgeneal->scanImages }}</td>
-                                    <td>{{ $row_Lgeneal->scanJobs }}</td>
+                                    <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
+                                    <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
+                                    <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
+                                    <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
 
                                 </tr>
                             @endforeach

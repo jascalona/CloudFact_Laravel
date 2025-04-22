@@ -25,8 +25,10 @@ class Lgenal extends Model
         'cont_ante_color',
         'cont_actu_color',
         'volum_color',
-        'scanImages',
-        'scanJobs'   
+        'cont_ante_scan_images',
+        'cont_actu_scan_images',
+        'cont_ante_scan_jobs',
+        'cont_actu_scan_jobs'   
     ];
 
 }
