@@ -62,14 +62,14 @@
 
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{{ route('bill') }}">
-                    <i class='bx bx-file'></i>
+                        <i class='bx bx-file'></i>
                         <span class="nav-link-text ms-1">Facturación</span>
                     </a>
                 </li>
 
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{{ route('contact') }}">
-                    <i class='bx bxs-user-account'></i>
+                        <i class='bx bxs-user-account'></i>
                         <span class="nav-link-text ms-1">Contacto</span>
                     </a>
                 </li>
@@ -77,14 +77,7 @@
                 <li class="nav-item">
                     <a class="nav-link text-dark" href="{{ route('install') }}">
                         <i class='bx bx-move-horizontal'></i>
-                        <span class="nav-link-text ms-1">Instalaciones</span>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link text-dark" href="../pages/rtl.html">
-                        <i class='bx bxs-message-square-x'></i>
-                        <span class="nav-link-text ms-1">Desinstalaciones</span>
+                        <span class="nav-link-text ms-1">Movimientos</span>
                     </a>
                 </li>
 
@@ -92,6 +85,12 @@
                     <a class="nav-link text-dark" href="../pages/notifications.html">
                         <i class='bx bx-home-smile'></i>
                         <span class="nav-link-text ms-1">Inventario</span>
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="{{ route('contract') }}">
+                        <i class='bx bxs-briefcase'></i> <span class="nav-link-text ms-1">Contrato</span>
                     </a>
                 </li>
 

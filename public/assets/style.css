@@ -29153,7 +29153,7 @@ pre[class*=language-] {
 /*# sourceMappingURL=dashboard-free.css.map */
 
 /*SETTING new-contact*/
-.card-body .new-contact input{
+.card-body .new-contact input {
   border: none;
   border-radius: 0;
   border-bottom: solid 1px #c3c3c3;
@@ -29161,7 +29161,25 @@ pre[class*=language-] {
   width: 100%;
 }
 
-.card-body .new-contact input:focus{
+.card-body .new-contact input:focus {
   border-color: green;
   outline: none;
+}
+
+/*CARD LECTURA*/
+
+.card-body .card-lectura {
+  box-shadow: 0 1px 10px rgba(83, 82, 82, 0.293);
+  border: solid 1px #f3f3f3;
+  margin: 30px;
+  padding: 30px;
+  min-height: 480px;
+}
+
+.card-body .lectura input {
+  border: none;
+}
+
+.card .nav-item{
+  margin-top: -16px;
 }

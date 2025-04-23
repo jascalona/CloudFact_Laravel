@@ -55,4 +55,12 @@ class ScreensController extends Controller
         return view("logic.new_contact");
     }
 
+    public function VContract(){
+        return view("logic.VContact");
+    }
+
+    public function contract(){
+        return view("screens.contract");
+    }
+
 }

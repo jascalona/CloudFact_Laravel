@@ -110,7 +110,7 @@
                     <div class="gallery-contact">
                         @foreach ($customers as $row_customer)
 
-                            <a class="text-decoration-none" href="">
+                            <a class="text-decoration-none" href="{{ route('VContract') }}">
                                 <div class="card mt-3 mb-3">
                                     <div class="row g-0">
 
