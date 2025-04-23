@@ -96,11 +96,10 @@
                         <div class="card-header pb-0 p-3">
                             <div class="row">
                                 <div class="col-6 d-flex align-items-center">
-                                    <h6 class="mb-0">Generar Orden</h6>
+                                    <h4 class="mb-0">Nueva Orden</h4>
                                 </div>
                                 <div class="col-6 text-end mb-3">
-                                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
-                                            class='bx bx-plus'></i>&nbsp;&nbsp;Nueva Orden</a>
+                                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class='bx bxs-save'></i>&nbsp;&nbsp;Guardar Orden</a>
                                 </div>
                             </div>
                         </div>
@@ -203,7 +202,7 @@
                         <div class="card-header pb-0 p-3">
                             <div class="row">
                                 <div class="col-6 d-flex align-items-center">
-                                    <h4 class="mb-0">Resumen: <small>Ordenes</small></h4>
+                                    <h4 class="mb-0">Generar Orden</h4>
                                 </div>
 
                                 <div class="icons-pages col-6 text-end mb-3">
