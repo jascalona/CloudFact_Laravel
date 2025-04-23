@@ -45,4 +45,9 @@ class ScreensController extends Controller
         return view("screens.install");
     }
 
+    public function contact(){
+        $customers  = Customer::all();
+        return view("screens.contact", compact("customers"));
+    }
+
 }

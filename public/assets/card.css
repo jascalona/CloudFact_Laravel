@@ -720,16 +720,72 @@ p {
 }
 
 
-.container-gallery{
-    max-width: 90%;
-    margin: 0 auto;
+.gallery-contact{
+    max-width: 100%;
+    margin: 15px auto;
     display: grid;
-    gap: 3%;
 }
 
-@media (min-width: 992px) {
-    .container-gallery{
-        background: blue;
-        grid-template-columns: repeat(4, 1fr);
+.gallery-contact .card .content-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+}
+
+.gallery-contact .card .icon i{
+    font-size: 90px;
+}
+
+.gallery-contact .card{
+    width: 480px;
+    height: 250px;
+    max-height: 250px;
+}
+
+.gallery-contact .card .card-body h6{
+    font-size: 16px;
+    font-weight: 600;
+}
+
+@media (min-width: 1450px) {
+    .gallery-contact{
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px 10px;
     }
 }
+
+@media (max-width: 1449px) {
+    .gallery-contact{
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px 20px;
+    }
+}
+
+/*VISTAS DE TABLE*/
+@media (max-width: 880px) {
+    .gallery-contact{
+        max-width: 100%;
+        margin: auto;
+        padding: 5px;
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-contact .card{
+        width: 100%;
+    }
+}
+
+/*VISTAS DE MOVIL*/
+@media (max-width: 600px) {
+    .gallery-contact .card{
+        width: 100%;
+    }
+}
+
+@media (max-width: 400px) {
+    .gallery-contact .card{
+        width: 85%;
+    }
+}
+

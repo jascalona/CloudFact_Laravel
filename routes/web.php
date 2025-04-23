@@ -48,5 +48,9 @@ Route::get('/LCustomer', [App\Http\Controllers\ScreensController::class,'LCustom
 /**ruta bill */
 Route::get('/bill', [App\Http\Controllers\ScreensController::class,'bill'])->name('bill');
 
+/**ruta contact */
+Route::get('/contact', [App\Http\Controllers\ScreensController::class,'contact'])->name('contact');
+
 /**ruta install device new park */
 Route::get('/install', [App\Http\Controllers\ScreensController::class,'install'])->name('install');
+
