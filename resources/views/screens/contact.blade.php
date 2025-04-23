@@ -96,10 +96,10 @@
                         <div class="card-header pb-0 p-3">
                             <div class="row">
                                 <div class="col-6 d-flex align-items-center">
-                                    <h4 class="mb-0">Nueva Contacto</h4>
+                                    <h4 class="mb-">Nueva Contacto</h4>
                                 </div>
                                 <div class="col-6 text-end mb-3">
-                                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                    <a class="btn bg-gradient-dark mb-0" href="{{ route('new_contact') }}"><i
                                             class='bx bx-plus'></i>&nbsp;&nbsp;Nuevo</a>
                                 </div>
                             </div>

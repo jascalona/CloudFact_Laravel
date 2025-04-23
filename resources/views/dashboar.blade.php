@@ -262,7 +262,7 @@
 
                                                 <td>
                                                     <div class="d-flex px-6 py-1">
-                                                        <h6 class="mb-0 text-sm">{{ $customer_row->tipo }}</h6>
+                                                        <h6 class="mb-0 text-sm">{{ $customer_row->tipo_c }}</h6>
                                                     </div>
                                                 </td>
 

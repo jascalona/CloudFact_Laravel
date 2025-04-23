@@ -38,7 +38,8 @@ class ScreensController extends Controller
     }
 
     public function bill(){
-        return view("screens.bill");
+        $customers = Customer::all();
+        return view("screens.bill" , compact("customers"));
     }
 
     public function install(){
@@ -48,6 +49,10 @@ class ScreensController extends Controller
     public function contact(){
         $customers  = Customer::all();
         return view("screens.contact", compact("customers"));
+    }
+
+    public function new_contact(){
+        return view("logic.new_contact");
     }
 
 }

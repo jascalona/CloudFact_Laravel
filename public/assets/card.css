@@ -722,8 +722,9 @@ p {
 
 .gallery-contact{
     max-width: 100%;
-    margin: 15px auto;
+    margin: 0 auto;
     display: grid;
+    padding: 10px;
 }
 
 .gallery-contact .card .content-card{

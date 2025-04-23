@@ -99,20 +99,23 @@
                                     <h4 class="mb-0">Nueva Orden</h4>
                                 </div>
                                 <div class="col-6 text-end mb-3">
-                                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class='bx bxs-save'></i>&nbsp;&nbsp;Guardar Orden</a>
+                                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                            class='bx bxs-save'></i>&nbsp;&nbsp;Guardar Orden</a>
                                 </div>
                             </div>
                         </div>
 
                         <div class="card-body p-3">
-                            <div class="row">
+                            <div class="row new-contact">
                                 <div class="col-md-6 mb-md-0 mb-4">
                                     <div
                                         class="card card-body border card-plain border-radius-lg d-flex align-items-center flex-row">
 
                                         <select class="form-select form-select-lg mb-3" aria-label="Large select example">
                                             <option selected>Seleccione un Cliente</option>
-                                            <option value="1">nameCliente</option>
+                                            @foreach ($customers as $select)
+                                                <option value="1">{{ $select->name }}</option>
+                                            @endforeach
                                         </select>
                                     </div><br>
 
@@ -121,34 +124,33 @@
                                             class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
                                             <!--form auto completado-->
                                             <div class="input-group mb-3">
-                                                <span class="input-group-text" id="basic-addon1">@</span>
-                                                <input type="text" class="form-control" placeholder="RIF"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-" placeholder="RIF" aria-label="Username"
+                                                    aria-describedby="basic-addon1" readonly>
                                             </div>
 
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Direccion Fiscal"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-" placeholder="Direccion Fiscal"
+                                                    aria-label="Username" aria-describedby="basic-addon1" readonly>
                                             </div>
 
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Ciudad"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-" placeholder="Ciudad" aria-label="Username"
+                                                    aria-describedby="basic-addon1" readonly>
                                             </div>
 
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Persona de Contacto"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-" placeholder="Persona de Contacto"
+                                                    aria-label="Username" aria-describedby="basic-addon1" readonly>
                                             </div>
 
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Email"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-" placeholder="Email" aria-label="Username"
+                                                    aria-describedby="basic-addon1" readonly>
                                             </div>
 
                                             <div class="input-group mb-3">
-                                                <input type="text" class="form-control" placeholder="Movil"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" class="form-" placeholder="Movil" aria-label="Username"
+                                                    aria-describedby="basic-addon1" readonly>
                                             </div><br>
 
                                             <!--form auto completado-->
@@ -162,30 +164,30 @@
                                         <!--form auto completado-->
                                         <div class="form-text" id="basic-addon4">Emision de Factura</div>
                                         <div class="input-group mb-3">
-                                            <input type="date" class="form-control" placeholder="Emision"
-                                                aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="date" class="form-" placeholder="Emision" aria-label="Username"
+                                                aria-describedby="basic-addon1">
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Tipo de Contrato"
-                                                aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-" placeholder="Tipo de Contrato"
+                                                aria-label="Username" aria-describedby="basic-addon1" readonly>
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="N# Contrato"
-                                                aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-" placeholder="N# Contrato" aria-label="Username"
+                                                aria-describedby="basic-addon1" readonly>
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="N# Factura"
-                                                aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-" placeholder="N# Factura" aria-label="Username"
+                                                aria-describedby="basic-addon1" readonly>
                                         </div>
 
                                         <div class="input-group mb-3">
-                                            <input type="text" class="form-control" placeholder="Click"
-                                                aria-label="Username" aria-describedby="basic-addon1">
+                                            <input type="text" class="form-" placeholder="Click" aria-label="Username"
+                                                aria-describedby="basic-addon1" readonly>
                                         </div>
-                                   
+
                                         <!--form auto completado-->
                                     </div>
                                 </div>

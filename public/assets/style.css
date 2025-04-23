@@ -29151,3 +29151,17 @@ pre[class*=language-] {
 }
 
 /*# sourceMappingURL=dashboard-free.css.map */
+
+/*SETTING new-contact*/
+.card-body .new-contact input{
+  border: none;
+  border-radius: 0;
+  border-bottom: solid 1px #c3c3c3;
+  padding: 10px;
+  width: 100%;
+}
+
+.card-body .new-contact input:focus{
+  border-color: green;
+  outline: none;
+}
