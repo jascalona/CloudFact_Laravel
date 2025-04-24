@@ -140,6 +140,13 @@
                                                     </div>
 
                                                     <div class="input-group mb-4">
+                                                        <div class="form-text" id="basic-addon4">RIF</div>
+                                                        <input type="text" class="form-"
+                                                            placeholder="Por ejemplo, J000000006"
+                                                            aria-label="Username" aria-describedby="basic-addon1" readonly>
+                                                    </div>
+
+                                                    <div class="input-group mb-4">
                                                         <div class="form-text" id="basic-addon4">Dirección Fiscal</div>
                                                         <input type="text" class="form-"
                                                             placeholder="Por ejemplo, Av Eugenio Mendoza Edif Torre La Castellana"

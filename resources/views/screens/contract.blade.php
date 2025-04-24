@@ -96,7 +96,7 @@
                         <div class="card-header pb-0 p-3">
                             <div class="row">
                                 <div class="col-6 d-flex align-items-center">
-                                    <h4 class="mb-2">Nuevo Contacto</h4>
+                                    <h4 class="mb-2"><strong>Nuevo Contacto</strong></h4>
                                 </div>
                                 <div class="col-6 text-end mb-3">
                                     <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
