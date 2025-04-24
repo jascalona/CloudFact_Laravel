@@ -56,6 +56,7 @@ Route::get('new_contact', [App\Http\Controllers\ScreensController::class,'new_co
 
 Route::get('VContract', [App\Http\Controllers\ScreensController::class,'VContract'])->name('VContract');
 
+Route::post('new_contact', [App\Http\Controllers\CustomerController::class,'store'])->name('new_contact.store');
 
 /**ruta contrac */
 Route::get('contract', [App\Http\Controllers\ScreensController::class,'contract'])->name('contract');

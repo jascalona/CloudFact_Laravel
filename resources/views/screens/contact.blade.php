@@ -90,6 +90,12 @@
                     </div>
                 </div>
 
+                @if ($message_e = Session::get('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ $message_e }}
+                    </div>
+                @endif
+
                 <!--section create bill-->
                 <div class="col-md-12 mb-lg-0 mb-4">
                     <div class="card mt-4">
@@ -145,47 +151,47 @@
                 <!--section create bill-->
 
                 <!--TABLE ORDEN-
-                                    <div class="col-md-15 mb-lg-0 mb-4">
-                                        <div class="card mt-4">
-                                            <div class="card-header pb-0 p-3">
-                                                <div class="row">
-                                                    <div class="col-6 d-flex align-items-center">
-                                                        <h4 class="mb-0">Generar Orden</h4>
-                                                    </div>
+                                        <div class="col-md-15 mb-lg-0 mb-4">
+                                            <div class="card mt-4">
+                                                <div class="card-header pb-0 p-3">
+                                                    <div class="row">
+                                                        <div class="col-6 d-flex align-items-center">
+                                                            <h4 class="mb-0">Generar Orden</h4>
+                                                        </div>
 
-                                                    <div class="icons-pages col-6 text-end mb-3">
-                                                        <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
-                                                        <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                                                        <div class="icons-pages col-6 text-end mb-3">
+                                                            <button id="scroll-button-left"><i class='bx bx-chevron-left'></i></button>
+                                                            <button id="scroll-button-right"><i class='bx bx-chevron-right'></i></button>
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
 
-                                            <div class="main p-5">
+                                                <div class="main p-5">
 
-                                                <div class="content-table">
-                                                    <table id="myTable" class="display">
-                                                        <thead>
-                                                            <tr>
-                                                                <th>Column 1</th>
-                                                                <th>Column 2</th>
-                                                            </tr>
-                                                        </thead>
-                                                        <tbody>
-                                                            <tr>
-                                                                <td>Row 1 Data 1</td>
-                                                                <td>Row 1 Data 2</td>
-                                                            </tr>
-                                                            <tr>
-                                                                <td>Row 2 Data 1</td>
-                                                                <td>Row 2 Data 2</td>
-                                                            </tr>
-                                                        </tbody>
-                                                    </table>
+                                                    <div class="content-table">
+                                                        <table id="myTable" class="display">
+                                                            <thead>
+                                                                <tr>
+                                                                    <th>Column 1</th>
+                                                                    <th>Column 2</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr>
+                                                                    <td>Row 1 Data 1</td>
+                                                                    <td>Row 1 Data 2</td>
+                                                                </tr>
+                                                                <tr>
+                                                                    <td>Row 2 Data 1</td>
+                                                                    <td>Row 2 Data 2</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    TABLE ORDEN-->
+                                        TABLE ORDEN-->
 
 
             </div>

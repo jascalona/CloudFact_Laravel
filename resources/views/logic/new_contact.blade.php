@@ -91,17 +91,28 @@
                 </div>
 
                 <!--section create contact-->
+                @if ($message_e = Session::get('error'))
+                <div class="alert alert-danger" role="alert">
+                    {{ $message_e }}
+                </div>
+                @endif
+      
                 <div class="col-md-12 mb-lg-0 mb-4">
                     <div class="card mt-4">
                         <div class="card-header pb-0 p-3">
+
                             <div class="row">
-                                <div class="col-6 d-flex align-items-center">
-                                    <h4 class="mb-2">Nuevo Contacto</h4>
+                                <div class="col- d-flex align-items-center">
                                 </div>
-                                <div class="col-6 text-end mb-3">
-                                    <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i
-                                            class='bx bxs-save'></i>&nbsp;&nbsp;Guardar</a>
-                                </div>
+
+                                <form action="{{ route('new_contact.store') }}" method="post">
+                                    @csrf
+
+                                    <div class="col-12 text-end mb-3">
+                                        <button type="submit" value="submit" name="btn-load"
+                                            class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                                class='bx bxs-save'></i>&nbsp;&nbsp;Guardar</button>
+                                    </div>
                             </div>
                         </div>
 
@@ -109,42 +120,49 @@
                             <div class="row new-contact">
                                 <div class="col-md-6 mb-md-0 mb-4">
 
+
                                     <div style="font-size: 28px" class="input-group mb-3">
-                                        <input type="text" class="form-" placeholder="Por ejemplo, Xerox Corpotation"
-                                            aria-label="Username" aria-describedby="basic-addon1">
+                                        <input type="text" name="name" class="form-"
+                                            placeholder="Por ejemplo, Xerox Corpotation" aria-label="Username"
+                                            aria-describedby="basic-addon1">
                                     </div>
 
                                     <div class="col-md-">
                                         <div
                                             class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
-                                            <!--form auto completado-->
+
+                                            <!--formulario-->
                                             <div class="input-group mb-4">
                                                 <div class="form-text" id="basic-addon4">RIF</div>
-                                                <input type="text" class="form-" placeholder="Por ejemplo, J000000006"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" name="rif" class="form-"
+                                                    placeholder="Por ejemplo, J000000006" aria-label="Username"
+                                                    aria-describedby="basic-addon1">
                                             </div>
 
                                             <div class="input-group mb-4">
                                                 <div class="form-text" id="basic-addon4">Dirección Fiscal</div>
-                                                <input type="text" class="form-"
+                                                <input type="text" name="direct_f" class="form-"
                                                     placeholder="Por ejemplo, Av Eugenio Mendoza Edif Torre La Castellana"
                                                     aria-label="Username" aria-describedby="basic-addon1">
                                             </div>
 
                                             <div class="input-group mb-4">
                                                 <div class="form-text" id="basic-addon4">Ciudad</div>
-                                                <input type="text" class="form-" placeholder="Por ejemplo, Caracas"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" name="city" class="form-"
+                                                    placeholder="Por ejemplo, Caracas" aria-label="Username"
+                                                    aria-describedby="basic-addon1">
                                             </div>
 
                                             <div class="input-group mb-5">
                                                 <div class="form-text" id="basic-addon4">Estado</div>
-                                                <input type="text" class="form-" placeholder="Por ejemplo, Distrito Capital"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
+                                                <input type="text" name="estado" class="form-"
+                                                    placeholder="Por ejemplo, Distrito Capital" aria-label="Username"
+                                                    aria-describedby="basic-addon1">
                                             </div>
 
-                                            <!--form auto completado-->
+                                            <!--formulario-->
                                         </div>
+
                                     </div>
                                 </div>
 
@@ -152,33 +170,40 @@
                                     <br><br><br><br>
                                     <div
                                         class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
-                                        <!--form auto completado-->
+
+                                        <!--formulario-->
                                         <div class="form-text" id="basic-addon4">Emision de Contacto</div>
                                         <div class="input-group mb-3">
-                                            <input type="date" class="form-" placeholder="Emision" aria-label="Username"
+                                            <input type="date" name="date" class="form-" placeholder="Emision"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
+
+                                        <div class="input-group mb-4">
+                                            <div class="form-text" id="basic-addon4">Persona de Contacto</div>
+                                            <input type="text" name="p_contact" class="form-"
+                                                placeholder="Por ejemplo, Jose Escalona" aria-label="Username"
                                                 aria-describedby="basic-addon1">
                                         </div>
 
                                         <div class="input-group mb-4">
-                                                <div class="form-text" id="basic-addon4">Persona de Contacto</div>
-                                                <input type="text" class="form-" placeholder="Por ejemplo, Jose Escalona"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
+                                            <div class="form-text" id="basic-addon4">Email</div>
+                                            <input type="email" name="p_email" class="form-"
+                                                placeholder="Por ejemplo, example@grupoxven.com" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
 
-                                            <div class="input-group mb-4">
-                                                <div class="form-text" id="basic-addon4">Email</div>
-                                                <input type="text" class="form-"
-                                                    placeholder="Por ejemplo, example@grupoxven.com" aria-label="Username"
-                                                    aria-describedby="basic-addon1">
-                                            </div>
+                                        <div class="input-group mb-2">
+                                            <div class="form-text" name="p_movil" id="basic-addon4">Movil</div>
+                                            <input type="tel" class="form-" placeholder="Por ejemplo 02123215477"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div><br>
 
-                                            <div class="input-group mb-2">
-                                                <div class="form-text" id="basic-addon4">Movil</div>
-                                                <input type="tel" class="form-" placeholder="Por ejemplo 02123215477"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div><br>
-                                        <!--form auto completado-->
+                                        <!--formulario-->
                                     </div>
+                                    <br>
+
+
+                                    </form>
                                 </div>
                             </div>
                         </div>
