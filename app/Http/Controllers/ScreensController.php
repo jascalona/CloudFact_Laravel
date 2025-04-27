@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use App\Models\Customer;
 use App\Models\Park;
 use App\Models\Lgenal;
+use App\Models\Contact;
+use PhpParser\Node\Expr\AssignOp\Concat;
 
 class ScreensController extends Controller
 {
@@ -55,12 +57,14 @@ class ScreensController extends Controller
         return view("logic.new_contact");
     }
 
-    public function VContract(){
-        return view("logic.VContact");
-    }
-
     public function contract(){
         return view("screens.contract");
     }
+
+    public function edit($id){
+        $cliente = Customer::findOrFail( $id );
+        return view("logic.VContact", compact("cliente"));
+    }
+
 
 }

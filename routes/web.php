@@ -54,7 +54,9 @@ Route::get('/contact', [App\Http\Controllers\ScreensController::class,'contact']
 
 Route::get('new_contact', [App\Http\Controllers\ScreensController::class,'new_contact'])->name('new_contact');
 
-Route::get('VContract', [App\Http\Controllers\ScreensController::class,'VContract'])->name('VContract');
+
+/**ruta segun su id */
+Route::get('/VContact{cliente}', [App\Http\Controllers\ScreensController::class,'edit'])->name('VContact.edit');
 
 Route::post('new_contact', [App\Http\Controllers\CustomerController::class,'store'])->name('new_contact.store');
 
