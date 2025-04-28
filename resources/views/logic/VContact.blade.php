@@ -110,7 +110,7 @@
                                 <li class="nav-item" role="presentation">
                                     <button class="nav-link" id="contact-tab" data-bs-toggle="tab"
                                         data-bs-target="#contact-tab-pane" type="button" role="tab"
-                                        aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+                                        aria-controls="contact-tab-pane" aria-selected="false">Contrato</button>
                                 </li>
                             </ul>
 
@@ -134,6 +134,8 @@
                                             <div class="col-md-">
                                                 <div
                                                     class="card card-body lectura card-plain border-radius-lg d-block align-items-center flex-row">
+                                                    
+                                                    <img class="w-20 mb-4" src="{{ asset('images/xdv.png') }}" alt="">
                                                     <!--form auto completado-->
                                                     <div class="input-group mb-4">
                                                         <h2>{{ $cliente->name }}</h2>
@@ -173,7 +175,7 @@
 
                                         <div class="col-md-6">
                                             <div
-                                                class="card card-body lectura mt-3 card-plain border-radius-lg d-block align-items-center flex-row">
+                                                class="card card-body lectura mt-8 card-plain border-radius-lg d-block align-items-center flex-row">
                                                 <!--form auto completado-->
                                                 <div class="form-text" id="basic-addon4">Emision de Contacto</div>
                                                 <div class="input-group mb-3">
