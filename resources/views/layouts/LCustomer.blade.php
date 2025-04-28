@@ -421,7 +421,7 @@
                                 <div class="content-table">
                                     <table id="myTable" class="display">
                                         <thead>
-                                            <tr style="font-size: 13px;">
+                                        <tr style="font-size: 13px;">
                                                 <th>Cliente</th>
                                                 <th>RIF</th>
                                                 <th>Serial</th>
@@ -430,35 +430,43 @@
                                                 <th>Date</th>
                                                 <th>Cont. Anterior B/N</th>
                                                 <th>Cont. Actual B/N</th>
-                                                <th>Volumen B/N</th>
+                                                <th>Volum. B/N</th>
+                                                <th>AMCV_bn</th>
                                                 <th>Cont. Anterior Color</th>
                                                 <th>Cont. Actual Color</th>
-                                                <th>Volumen Color</th>
+                                                <th>Volum. Color</th>
+                                                <th>AMCV_color</th>
                                                 <th>Cont. Anterior ScanImages</th>
                                                 <th>Cont. Actual ScanImages</th>
+                                                <th>Volum. Scan Images</th>
                                                 <th>Cont. Anterior ScanJobs</th>
                                                 <th>Cont. Actual ScanJobs</th>
+                                                <th>Volum. Scan Jobs</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($load as $row)
                                                 <tr style="font-size: 12px;">
-                                                    <td>{{ $load->cliente }}</td>
-                                                    <td>{{ $load->rif }}</td>
-                                                    <td>{{ $load->serial }}</td>
-                                                    <td>{{ $load->model }}</td>
-                                                    <td>{{ $load->location }}</td>
-                                                    <td>{{ $load->date }}</td>
-                                                    <td>{{ $load->cont_ante_bn }}</td>
-                                                    <td>{{ $load->cont_actu_bn }}</td>
-                                                    <td>{{ $load->volum_bn }}</td>
-                                                    <td>{{ $load->cont_ante_color }}</td>
-                                                    <td>{{ $load->cont_actu_color }}</td>
-                                                    <td>{{ $load->volum_color }}</td>
-                                                    <td>{{ $load->cont_ante_scan_images }}</td>
-                                                    <td>{{ $load->cont_actu_scan_images }}</td>
-                                                    <td>{{ $load->cont_ante_scan_jobs }}</td>
-                                                    <td>{{ $load->cont_actu_scan_jobs }}</td>
+                                                    <td>{{ $row->cliente }}</td>
+                                                    <td>{{ $row->rif }}</td>
+                                                    <td>{{ $row->serial }}</td>
+                                                    <td>{{ $row->model }}</td>
+                                                    <td>{{ $row->location }}</td>
+                                                    <td>{{ $row->date }}</td>
+                                                    <td>{{ $row->cont_ante_bn }}</td>
+                                                    <td>{{ $row->cont_actu_bn }}</td>
+                                                    <td>{{ $row->volum_bn }}</td>
+                                                    <td>{{ $row->AMCV_bn }}</td>
+                                                    <td>{{ $row->cont_ante_color }}</td>
+                                                    <td>{{ $row->cont_actu_color }}</td>
+                                                    <td>{{ $row->volum_color }}</td>
+                                                    <td>{{ $row->AMCV_color }}</td>
+                                                    <td>{{ $row->cont_ante_scan_images }}</td>
+                                                    <td>{{ $row->cont_actu_scan_images }}</td>
+                                                    <td>{{ $row->volum_scan_images }}</td>
+                                                    <td>{{ $row->cont_ante_scan_jobs }}</td>
+                                                    <td>{{ $row->cont_actu_scan_jobs }}</td>
+                                                    <td>{{ $row->volum_scan_jobs }}</td>
 
                                                 </tr>
                                             @endforeach

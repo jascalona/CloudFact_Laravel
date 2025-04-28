@@ -39,7 +39,7 @@ class ScreensController extends Controller
 
     public function show($id){
         $clienteL = Customer::findOrFail($id);
-        $load = lgenals::findOrFail($id);
+        $load = lgenals::all();
         return view("layouts.LCustomer", compact("clienteL", "load"));
     }
 

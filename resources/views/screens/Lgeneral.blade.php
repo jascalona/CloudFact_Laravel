@@ -136,10 +136,10 @@
 
                                                                         <h4>Descargar Plantillas</h4>
                                                                         <p>Aquí puede descargar la Plantilla de Importación
-                                                                            <a href="../BULK_LOAD_FILES_FOR_READING.csv"
-                                                                                data-bs-toggle="tooltip"
-                                                                                title="Tooltip">Descargar</a>
                                                                         </p>
+                                                                        <a href="" data-bs-toggle="tooltip"
+                                                                            title="Tooltip">Descargar</a>
+
 
                                                                         <hr>
 
@@ -272,6 +272,7 @@
                                     <table id="myTable" class="display">
                                         <thead>
                                             <tr style="font-size: 13px;">
+                                                <th class="text-center">Opciones</th>
                                                 <th>Cliente</th>
                                                 <th>RIF</th>
                                                 <th>Serial</th>
@@ -280,19 +281,27 @@
                                                 <th>Date</th>
                                                 <th>Cont. Anterior B/N</th>
                                                 <th>Cont. Actual B/N</th>
-                                                <th>Volumen B/N</th>
+                                                <th>Volum. B/N</th>
+                                                <th>AMCV_bn</th>
                                                 <th>Cont. Anterior Color</th>
                                                 <th>Cont. Actual Color</th>
-                                                <th>Volumen Color</th>
+                                                <th>Volum. Color</th>
+                                                <th>AMCV_color</th>
                                                 <th>Cont. Anterior ScanImages</th>
                                                 <th>Cont. Actual ScanImages</th>
+                                                <th>Volum. Scan Images</th>
                                                 <th>Cont. Anterior ScanJobs</th>
                                                 <th>Cont. Actual ScanJobs</th>
+                                                <th>Volum. Scan Jobs</th>
                                             </tr>
                                         </thead>
                                         <tbody>
                                             @foreach ($Lgenals as $row_Lgeneal)
                                                 <tr style="font-size: 12px;">
+                                                    <td class="text-center">
+                                                        <button class="btn btn-warning"><i class='bx bxs-edit-alt'></i></button>
+                                                        <button class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
+                                                    </td>
                                                     <td>{{ $row_Lgeneal->cliente }}</td>
                                                     <td>{{ $row_Lgeneal->rif }}</td>
                                                     <td>{{ $row_Lgeneal->serial }}</td>
@@ -302,13 +311,17 @@
                                                     <td>{{ $row_Lgeneal->cont_ante_bn }}</td>
                                                     <td>{{ $row_Lgeneal->cont_actu_bn }}</td>
                                                     <td>{{ $row_Lgeneal->volum_bn }}</td>
+                                                    <td>{{ $row_Lgeneal->AMCV_bn }}</td>
                                                     <td>{{ $row_Lgeneal->cont_ante_color }}</td>
                                                     <td>{{ $row_Lgeneal->cont_actu_color }}</td>
                                                     <td>{{ $row_Lgeneal->volum_color }}</td>
+                                                    <td>{{ $row_Lgeneal->AMCV_color }}</td>
                                                     <td>{{ $row_Lgeneal->cont_ante_scan_images }}</td>
                                                     <td>{{ $row_Lgeneal->cont_actu_scan_images }}</td>
+                                                    <td>{{ $row_Lgeneal->volum_scan_images }}</td>
                                                     <td>{{ $row_Lgeneal->cont_ante_scan_jobs }}</td>
                                                     <td>{{ $row_Lgeneal->cont_actu_scan_jobs }}</td>
+                                                    <td>{{ $row_Lgeneal->volum_scan_jobs }}</td>
 
                                                 </tr>
                                             @endforeach
