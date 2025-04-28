@@ -7,6 +7,7 @@ use App\Models\Customer;
 use App\Models\Park;
 use App\Models\Lgenal;
 use App\Models\Contact;
+use App\Models\lgenals;
 use PhpParser\Node\Expr\AssignOp\Concat;
 
 class ScreensController extends Controller
@@ -34,10 +35,15 @@ class ScreensController extends Controller
         return view("screens.Lgeneral", compact("Lgenals"));
     }
 
-    public function LCustomer(){
-        $Lgenals = Lgenal::all();
-        return view("layouts.LCustomer", compact("Lgenals"));
+
+
+    public function show($id){
+        $clienteL = Customer::findOrFail($id);
+        $load = lgenals::findOrFail($id);
+        return view("layouts.LCustomer", compact("clienteL", "load"));
     }
+
+
 
     public function bill(){
         $customers = Customer::all();

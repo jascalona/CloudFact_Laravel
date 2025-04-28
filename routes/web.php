@@ -42,8 +42,9 @@ Route::get('/Lgeneral', [App\Http\Controllers\ScreensController::class,'Lgeneral
  
 Route::resource('Lgenals', App\Http\Controllers\ScreensController::class)->names('Lgenal');
 
-Route::get('/LCustomer', [App\Http\Controllers\ScreensController::class,'LCustomer'])->name('LCustomer');
+//Route::get('/LCustomer', [App\Http\Controllers\ScreensController::class,'LCustomer'])->name('LCustomer');
 
+Route::get('/LCustomer{show}', [App\Http\Controllers\ScreensController::class,'show'])->name('LCustomer');
 
 /**ruta bill */
 Route::get('/bill', [App\Http\Controllers\ScreensController::class,'bill'])->name('bill');
