@@ -171,6 +171,7 @@
                                     <table id="myTable" class="display">
                                         <thead>
                                             <tr style="font-size: 13px;">
+                                                <th class="text-center">Opciones</th>
                                                 <th>Cliente</th>
                                                 <th>RIF</th>
                                                 <th>Serial</th>
@@ -192,6 +193,10 @@
 
                                             @foreach ($parks as $row_park)
                                                 <tr style="font-size: 12px;">
+                                                    <td class="text-center">
+                                                        <button class="btn btn-warning"><i class='bx bxs-edit-alt'></i></button>
+                                                        <button class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
+                                                    </td>
                                                     <td>{{ $row_park->cliente }}</td>
                                                     <td>{{ $row_park->rif }}</td>
                                                     <td>{{ $row_park->serial }}</td>
@@ -219,7 +224,7 @@
                     </div>
                     <!--TABLE ORDEN-->
 
-                    
+
 
                 </div>
 

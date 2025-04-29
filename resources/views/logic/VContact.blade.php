@@ -120,6 +120,7 @@
 
                         <!-- Tabs navs -->
 
+
                         <div class="tab-content" id="myTabContent">
                             @csrf
                             <!--VISTA-->
@@ -129,17 +130,27 @@
                                 <div class="card-body p-3">
                                     <div class="row new-contact card-lectura">
 
+                                        <div class="viw-header">
+                                            <div class="logo">
+                                                <img src="{{ asset('images/cloud-regular-120.png') }}" alt="">
+                                                <h5>CloudFact<br>
+                                                    <span>Cloud Reading System</span>
+                                                </h5>
+                                            </div>
+                                        </div>
+
+                                        <div class="input-group mb-">
+                                            <h2>{{ $cliente->name }}</h2>
+                                        </div>
+                                        <hr class="text-center">
+
                                         <div class="col-md-6 mb-md-0 mb-4">
 
                                             <div class="col-md-">
                                                 <div
                                                     class="card card-body lectura card-plain border-radius-lg d-block align-items-center flex-row">
-
-                                                    <img class="w-20 mb-4" src="{{ asset('images/xdv.png') }}" alt="">
                                                     <!--form auto completado-->
-                                                    <div class="input-group mb-4">
-                                                        <h2>{{ $cliente->name }}</h2>
-                                                    </div>
+
 
                                                     <div class="input-group mb-4">
                                                         <div class="form-text" id="basic-addon4">RIF</div>
@@ -179,7 +190,7 @@
 
                                         <div class="col-md-6">
                                             <div
-                                                class="card card-body lectura mt-8 card-plain border-radius-lg d-block align-items-center flex-row">
+                                                class="card card-body lectura mt-1 card-plain border-radius-lg d-block align-items-center flex-row">
                                                 <!--form auto completado-->
                                                 <div class="form-text" id="basic-addon4">Emision de Contacto</div>
                                                 <div class="input-group mb-3">
@@ -243,13 +254,15 @@
                                                         <!--form auto completado-->
                                                         <div class="input-group mb-4">
                                                             <div class="form-text" id="basic-addon4">RIF</div>
-                                                            <input type="text" class="form-" name="rif" maxlength="15" required
-                                                                placeholder="Por ejemplo, J000000006" aria-label="Username"
-                                                                aria-describedby="basic-addon1" value="{{ $cliente->rif }}">
+                                                            <input type="text" class="form-" name="rif" maxlength="15"
+                                                                required placeholder="Por ejemplo, J000000006"
+                                                                aria-label="Username" aria-describedby="basic-addon1"
+                                                                value="{{ $cliente->rif }}">
                                                         </div>
 
                                                         <div class="input-group mb-4">
-                                                            <div class="form-text" id="basic-addon4">Dirección Fiscal</div>
+                                                            <div class="form-text" id="basic-addon4">Dirección Fiscal
+                                                            </div>
                                                             <input type="text" class="form-" name="direct_f" required
                                                                 placeholder="Por ejemplo, Av Eugenio Mendoza Edif Torre La Castellana"
                                                                 aria-label="Username" aria-describedby="basic-addon1"
@@ -284,33 +297,35 @@
                                                     <!--form auto completado-->
                                                     <div class="form-text" id="basic-addon4">Emision de Contacto</div>
                                                     <div class="input-group mb-3">
-                                                        <input type="date" class="form-" placeholder="Emision" name="date_creation" required
-                                                            aria-label="Username" aria-describedby="basic-addon1"
+                                                        <input type="date" class="form-" placeholder="Emision"
+                                                            name="date_creation" required aria-label="Username"
+                                                            aria-describedby="basic-addon1"
                                                             value="{{ $cliente->date_creation }}">
                                                     </div>
 
                                                     <div class="input-group mb-4">
-                                                        <div class="form-text" id="basic-addon4">Persona de Contacto</div>
+                                                        <div class="form-text" id="basic-addon4">Persona de Contacto
+                                                        </div>
                                                         <input type="text" class="form-"
-                                                            placeholder="Por ejemplo, Jose Escalona" aria-label="Username" required
-                                                            name="p_contact" aria-describedby="basic-addon1"
+                                                            placeholder="Por ejemplo, Jose Escalona" aria-label="Username"
+                                                            required name="p_contact" aria-describedby="basic-addon1"
                                                             value="{{ $cliente->p_contact }}">
                                                     </div>
 
                                                     <div class="input-group mb-4">
                                                         <div class="form-text" id="basic-addon4">Email</div>
                                                         <input type="text" class="form-"
-                                                            placeholder="Por ejemplo, example@grupoxven.com" name="p_email" required
-                                                            aria-label="Username" aria-describedby="basic-addon1"
+                                                            placeholder="Por ejemplo, example@grupoxven.com" name="p_email"
+                                                            required aria-label="Username" aria-describedby="basic-addon1"
                                                             value="{{ $cliente->p_email }}">
                                                     </div>
 
                                                     <div class="input-group mb-2">
                                                         <div class="form-text" id="basic-addon4">Movil</div>
                                                         <input type="tel" class="form-"
-                                                            placeholder="Por ejemplo 02123215477  (Opcional) " aria-label="Username" 
-                                                            name="p_movil" aria-describedby="basic-addon1"
-                                                            value="{{ $cliente->p_movil }}">
+                                                            placeholder="Por ejemplo 02123215477  (Opcional) "
+                                                            aria-label="Username" name="p_movil"
+                                                            aria-describedby="basic-addon1" value="{{ $cliente->p_movil }}">
                                                     </div><br>
                                                     <!--form auto completado-->
                                                 </div>
