@@ -22,20 +22,26 @@ Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index
 
   /**ruta park */
  Route::get('/park', [App\Http\Controllers\ScreensController::class, 'park'])->name('.park');
+ 
  Route::resource('/parks', App\Http\Controllers\ScreensController::class)->names('park');
 
  Route::resource('/customers',CustomerController::class)->names('customer');
 
+ Route::get('/Upark{edit}', [App\Http\Controllers\ParkController::class, 'edit'])->name('Upark.edit');
 
 
  /**ruta lecturas */
  Route::get('/lead', [App\Http\Controllers\ScreensController::class,'lead'])->name('.lead');
 
 
+
+
 /**ruta for ImportCSV */
 Route::get('Lgeneral', [App\Http\Controllers\ImportController::class,'form'])->name('form');
 
 Route::post('Lgeneral',[App\Http\Controllers\ImportController::class, 'import'])->name('import');
+
+
 
  /**ruta lectura general */
 Route::get('/Lgeneral', [App\Http\Controllers\ScreensController::class,'Lgeneral'])->name(  'Lgeneral');
@@ -46,8 +52,11 @@ Route::resource('Lgenals', App\Http\Controllers\ScreensController::class)->names
 
 Route::get('/LCustomer{show}', [App\Http\Controllers\ScreensController::class,'show'])->name('LCustomer');
 
+
+
 /**ruta bill */
 Route::get('/bill', [App\Http\Controllers\ScreensController::class,'bill'])->name('bill');
+
 
 
 /**ruta contact */
@@ -61,11 +70,14 @@ Route::get('/VContact{cliente}', [App\Http\Controllers\ScreensController::class,
 
 Route::put('/VContact{cliente}', [App\Http\Controllers\ScreensController::class,'update'])->name('VContact.update');
 
-
 Route::post('new_contact', [App\Http\Controllers\CustomerController::class,'store'])->name('new_contact.store');
+
+
 
 /**ruta contrac */
 Route::get('contract', [App\Http\Controllers\ScreensController::class,'contract'])->name('contract');
+
+
 
 /**ruta install device new park */
 Route::get('/install', [App\Http\Controllers\ScreensController::class,'install'])->name('install');

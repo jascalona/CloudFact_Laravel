@@ -25,7 +25,7 @@ class ScreensController extends Controller
         //return  $parks;
         return view("screens.park", compact("parks"));
     }
-
+    
     public function lead()
     {
 

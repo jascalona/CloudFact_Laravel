@@ -135,12 +135,36 @@
                                     required placeholder="Ingrese Ubicacion del Equipo"></textarea>
                             </div>
 
+
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
                                 <input name="CITY" type="text" class="form-control" id="exampleFormControlInput1" required
                                     placeholder="Ciudad donde se Instalo el Equipo">
                             </div>
 
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Estado</label>
+                                <input name="MODEL" type="text" class="form-control" id="exampleFormControlInput1" required
+                                    placeholder="Estado">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Persona de Contacto</label>
+                                <input name="MODEL" type="text" class="form-control" id="exampleFormControlInput1" required
+                                    placeholder="Persona de Contacto">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Email del cliente</label>
+                                <input name="MODEL" type="text" class="form-control" id="exampleFormControlInput1" required
+                                    placeholder="Email de contacto">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="exampleFormControlInput1" class="form-label">Numero de Contacto</label>
+                                <input name="MODEL" type="text" class="form-control" id="exampleFormControlInput1" required
+                                    placeholder="Numero de contacto">
+                            </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Fecha de Instalacion</label>

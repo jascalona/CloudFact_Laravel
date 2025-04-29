@@ -194,7 +194,7 @@
                                             @foreach ($parks as $row_park)
                                                 <tr style="font-size: 12px;">
                                                     <td class="text-center">
-                                                        <button class="btn btn-warning"><i class='bx bxs-edit-alt'></i></button>
+                                                        <a href="{{ route('Upark.edit', $row_park->id) }}" class="btn btn-warning"><i class='bx bxs-edit-alt'></i></a>
                                                         <button class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
                                                     </td>
                                                     <td>{{ $row_park->cliente }}</td>
