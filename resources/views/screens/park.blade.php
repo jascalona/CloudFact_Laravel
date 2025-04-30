@@ -149,6 +149,13 @@
                     </div>
                     <!--GRAFICOS-->
 
+
+                    @if ($message_e = Session::get('success'))
+                        <div class="alert alert-success" role="alert">
+                            {{ $message_e }}
+                        </div>
+                    @endif
+
                     <!--TABLE ORDEN-->
                     <div class="col-md-15 mb-lg-0 mb-4">
                         <div class="card mt-4">
@@ -194,7 +201,8 @@
                                             @foreach ($parks as $row_park)
                                                 <tr style="font-size: 12px;">
                                                     <td class="text-center">
-                                                        <a href="{{ route('Upark.edit', $row_park->id) }}" class="btn btn-warning"><i class='bx bxs-edit-alt'></i></a>
+                                                        <a href="{{ route('Upark.edit', $row_park->id) }}"
+                                                            class="btn btn-warning"><i class='bx bxs-edit-alt'></i></a>
                                                         <button class="btn btn-danger"><i class='bx bxs-trash-alt'></i></button>
                                                     </td>
                                                     <td>{{ $row_park->cliente }}</td>

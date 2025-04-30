@@ -29,6 +29,10 @@ Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index
 
  Route::get('/Upark{edit}', [App\Http\Controllers\ParkController::class, 'edit'])->name('Upark.edit');
 
+ Route::put('/Upark{edit}', [App\Http\Controllers\ParkController::class,'update'])->name('Upark.update');
+
+
+
 
  /**ruta lecturas */
  Route::get('/lead', [App\Http\Controllers\ScreensController::class,'lead'])->name('.lead');

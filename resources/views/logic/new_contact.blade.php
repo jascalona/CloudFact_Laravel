@@ -91,8 +91,8 @@
                 </div>
 
                 <!--section create contact-->
-                @if ($message_e = Session::get('error'))
-                <div class="alert alert-danger" role="alert">
+                @if ($message_e = Session::get('warning'))
+                <div class="alert alert-warning" role="alert">
                     {{ $message_e }}
                 </div>
                 @endif
