@@ -31,6 +31,8 @@ Route::get('/dashboard', [App\Http\Controllers\CustomerController::class, 'index
 
  Route::put('/Upark{edit}', [App\Http\Controllers\ParkController::class,'update'])->name('Upark.update');
 
+/**new device */
+Route::post('install', [App\Http\Controllers\ParkController::class,'store'])->name('park.store');
 
 
 

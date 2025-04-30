@@ -8,6 +8,33 @@ use App\Models\parks;
 
 class ParkController extends Controller
 {
+
+   /**NEW DEVICE IN PARK */
+   public function store(Request $request)
+   {
+      //Nuevas Instancia
+      if (!empty($_POST['new_device'])) {
+         # code...
+      } else {
+         # code...
+      }
+
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    /**Metodo show-edit */
    public function edit($id)
    {
