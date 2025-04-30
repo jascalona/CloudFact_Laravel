@@ -10,6 +10,7 @@
     <title>CloudFact-Park</title>
 
     <!--STYLES-->
+    <link rel="stylesheet" href="{{ asset('assets/edit_park.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/table_responsive.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/bootstrap.css') }}">
@@ -98,112 +99,111 @@
 
                 <!-- Reservation Start -->
                 <div class="container-fluid my-5">
-                    <div class="container">
+                    <div  class="container park-edition">
                         <div class="reservation position-relative overlay-top overlay-bottom">
                             <div class="row align-items-center">
                                 <div class="col-lg-6 my-5 my-lg-0">
-                                    <div class="p-5">
+                                    <div class="p-5 edit-left">
                                         <div class="mb-4">
-                                            <h6 class="display-3 text">{{ $device->cliente }}</h6>
+                                            <h6 style="font-weight: 800; font-size: 45px;" class="display-3 ">Detalles del Equipo</h6>
+                                            <br>
                                         </div>
                                         <form class="mb-5" action="" method="post">
                                             @method('put')
                                             @csrf
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent border-primary p-4"
+                                                <input type="text" class="form-control bg-transparent border-white p-4"
                                                 value="{{ $device->rif }}" placeholder="RIF" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent border-primary p-4"
+                                                <input type="text" class="form-control bg-transparent border-white p-4"
                                                    value="{{ $device->serial }}" placeholder="Serial" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent border-primary p-4"
+                                                <input type="text" class="form-control bg-transparent border-white p-4"
                                                     placeholder="Modelo" value="{{ $device->model }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent border-primary p-4"
+                                                <input type="text" class="form-control bg-transparent border-white p-4"
                                                     placeholder="Localidad" value="{{ $device->location }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent border-primary p-4"
+                                                <input type="text" class="form-control bg-transparent border-white p-4"
                                                     placeholder="Ciudad" value="{{ $device->city }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent border-primary p-4"
+                                                <input type="text" class="form-control bg-transparent border-white p-4"
                                                     placeholder="Estado" value="{{ $device->estado }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="date" class="form-control bg-transparent border-primary p-4"
+                                                <input type="date" class="form-control bg-transparent border-white p-4"
                                                     placeholder="Fecha de Instalacion" value="{{ $device->date_insta }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div>
-                                                <button class="btn btn-primary btn-block font-weight-bold py-3"
+                                                <button class="btn btn-dark btn-block font-weight-bold py-3"
                                                     type="submit">Guardar</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                                 <div class="col-lg-6">
-                                    <div class="text-center p-5" style="background: #646464;">
-                                        <h1 class="text-white mb-4 mt-5">{{ $device->name }}</h1>
+                                    <div class="text-center p-5 park-edit-ii">
+                                        <h1 class="text-dark mb-4 mt-5">{{ $device->cliente }}</h1>
                                         <form class="mb-5">
 
-                                         
-
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent text-white border-white p-4"
+                                                <input type="text" class="form-control bg-transparent text-dark border-dark p-4"
                                                     placeholder="Persona de Contacto" value="{{ $device->p_contact }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent text-white border-white p-4"
+                                                <input type="text" class="form-control bg-transparent text-dark border-dark p-4"
                                                     placeholder="Email de Contacto" value="{{ $device->p_email }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent text-white border-white p-4"
+                                                <input type="text" class="form-control bg-transparent text-dark border-dark p-4"
                                                     placeholder="Numero de Contacto" value="{{ $device->p_movil }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent text-white border-white p-4"
+                                                <input type="text" class="form-control bg-transparent text-dark border-dark p-4"
                                                     placeholder="Status" value="{{ $device->n_port }}" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="number" class="form-control bg-transparent text-white border-white p-4"
+                                                <input type="number" class="form-control bg-transparent text-dark border-dark p-4"
                                                     placeholder="Contador Inicial B/N" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="number" class="form-control bg-transparent text-white border-white p-4"
+                                                <input type="number" class="form-control bg-transparent text-dark border-dark p-4"
                                                     placeholder="Contador Inicial Color" required="required" />
                                             </div>
                                             <br>
 
                                             <div class="form-group">
-                                                <input type="text" class="form-control bg-transparent text-white border-white p-4"
+                                                <input type="text" class="form-control bg-transparent text-dark border-dark p-4"
                                                     placeholder="Observaciones" {{ $device->obser }} required="required" />
                                             </div>
                                             <br>

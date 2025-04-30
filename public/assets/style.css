@@ -29180,12 +29180,12 @@ pre[class*=language-] {
   border: none;
 }
 
-.card .nav-item{
+.card .nav-item {
   margin-top: -16px;
 }
 
 /*MODELO DE FACTURA*/
-.card-viw-fact{
+.card-viw-fact {
   width: 100%;
   margin: 0 auto;
   display: flex;
@@ -29193,39 +29193,39 @@ pre[class*=language-] {
 
 }
 
-.card-viw-fact article{
+.card-viw-fact article {
   max-width: 100%;
   background: red;
   border: solid 2px;
 }
 
 
-.viw-header .logo{
+.viw-header .logo {
   display: flex;
   align-items: center;
 }
 
-.viw-header .logo img{
+.viw-header .logo img {
   width: 140px;
 }
 
-.viw-header .logo h5{
+.viw-header .logo h5 {
   font-size: 30px;
   font-weight: 800;
   margin-left: 15px;
 }
 
-.viw-header .logo h5 span{
+.viw-header .logo h5 span {
   font-size: 15px;
 }
 
 /*body viw-content*/
-.body-card{
+.body-card {
   margin: 20px;
   padding: 20px;
 }
 
-.input-group h2{
+.input-group h2 {
   font-size: 35px;
   font-weight: 600;
   margin: 40px 20px;
@@ -29233,12 +29233,12 @@ pre[class*=language-] {
 
 
 
-.card-body label{
+.card-body label {
   color: #5E5E5E;
   font-size: 15px;
 }
 
-.card-body input{
+.card-body input {
   padding: 15px;
   width: 100%;
   border: none;
@@ -29251,6 +29251,4 @@ pre[class*=language-] {
   outline: none;
 }
 
-@media (max-width: 1650px) {
 
-}
