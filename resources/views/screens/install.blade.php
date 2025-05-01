@@ -24,6 +24,9 @@
     <script src="https://cdn.datatables.net/2.2.2/js/dataTables.js"></script>
     <script type="text/javascript" charset="utf8"
         src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.js"></script>
+    <link href="https://code.jquery.com/ui/1.10.4/themes/ui-lightness/jquery-ui.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="https://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
     <!--STYLES-->
 
 </head>
@@ -105,12 +108,18 @@
                         <form action="" method="POST">
 
 
+
+
+
+
+
                             <div class="mb-3">
-                                <label for="recipient-name" class="col-form-label">Modalidad de Intalación</label>
-                                <select class="form-select form-select-lg mb-3" aria-label="Large select example">
-                                    <option selected>Seleccione un Cliente</option>
+                                <label for="recipient-name" class="col-form-label">Cliente</label>
+
+                                <select id="customer" class="form-select form-select-lg mb-3" aria-label="Large select example">
+                                    <option value="valor1">Seleccione un Cliente</option>
                                     @foreach ($customers as $select)
-                                        <option >{{ $select->name }}</option>
+                                        <option value="{{ $select->rif }}">{{ $select->name }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -118,9 +127,17 @@
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">RIF</label>
-                                <input name="rif" type="text" class="form-control" id="rif" required
-                                    placeholder="RIF del Cliente">
+                                <input type="text" name="rif" id="rif" class="form-control" placeholder="Campo a llenar">
+
                             </div>
+
+                            <script>
+                                $("#customer").change(function () {
+                                    var selectedValue = $(this).val();
+                                    $("#rif").val(selectedValue);
+                                });
+                            </script>
+
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Serial</label>
