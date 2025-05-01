@@ -82,6 +82,11 @@
                 </div>
             </div>
 
+            @if ($message_e = Session::get('warning'))
+                    <div class="alert alert-warning" role="alert">
+                        {{ $message_e }}
+                    </div>
+                @endif
 
             <div class="container-componet-installation">
 
@@ -105,19 +110,16 @@
                         </div>
                         <!--INPUT GROUP FORM-->
 
-                        <form action="" method="POST">
-
-
-
-
-
+                        <form action="{{ route('install.store') }}" method="POST">
+                            @csrf
 
 
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Cliente</label>
 
-                                <select id="customer" class="form-select form-select-lg mb-3" aria-label="Large select example">
-                                    <option value="valor1">Seleccione un Cliente</option>
+                                <select id="customer" class="form-select form-select-lg mb-3"
+                                    aria-label="Large select example" name="cliente" required>
+                                    <option>Seleccione un Cliente</option>
                                     @foreach ($customers as $select)
                                         <option value="{{ $select->rif }}">{{ $select->name }}</option>
                                     @endforeach
@@ -127,7 +129,8 @@
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">RIF</label>
-                                <input type="text" name="rif" id="rif" class="form-control" placeholder="Campo a llenar">
+                                <input type="text" name="rif" id="rif" class="form-control" placeholder="Campo a llenar"
+                                    readonly>
 
                             </div>
 
@@ -141,62 +144,62 @@
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Serial</label>
-                                <input name="serial" type="text" class="form-control" id="exampleFormControlInput1" required
+                                <input name="serial" type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Serial del Equipo">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Modelo</label>
-                                <input name="model" type="text" class="form-control" id="exampleFormControlInput1" required
+                                <input name="model" type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Modelo del Equipo">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Direccion Exacta</label>
                                 <textarea name="location" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                    required placeholder="Ingrese Ubicacion del Equipo"></textarea>
+                                    placeholder="Ingrese Ubicacion del Equipo"></textarea>
                             </div>
 
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Ciudad</label>
-                                <input name="city" type="text" class="form-control" id="exampleFormControlInput1" required
+                                <input name="city" type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Ciudad donde se Instalo el Equipo">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Estado</label>
-                                <input name="estado" type="text" class="form-control" id="exampleFormControlInput1" required
+                                <input name="estado" type="text" class="form-control" id="exampleFormControlInput1"
                                     placeholder="Estado">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Persona de Contacto</label>
                                 <input name="p_contact" type="text" class="form-control" id="exampleFormControlInput1"
-                                    required placeholder="Persona de Contacto">
+                                    placeholder="Persona de Contacto">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Email del cliente</label>
-                                <input name="p_email" type="text" class="form-control" id="exampleFormControlInput1"
-                                    required placeholder="Email de contacto">
+                                <input name="p_email" type="email" class="form-control" id="exampleFormControlInput1"
+                                    placeholder="Email de contacto">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Numero de Contacto</label>
                                 <input name="p_movil" type="text" class="form-control" id="exampleFormControlInput1"
-                                    required placeholder="Numero de contacto">
+                                    placeholder="Numero de contacto">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Fecha de Instalacion</label>
                                 <input name="date_insta" type="date" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="" required>
+                                    placeholder="">
                             </div>
 
                             <div class="mb-3">
                                 <label for="recipient-name" class="col-form-label">Modalidad de Intalación</label>
-                                <select name="n_port" id="status" class="form-select form-select-lg mb-3" required
+                                <select name="n_port" id="status" class="form-select form-select-lg mb-3"
                                     aria-label="Large select example">
                                     <option></option>
                                     <option value="USB">USB</option>
@@ -216,20 +219,20 @@
                                 <label for="exampleFormControlInput1" class="form-label">Contador de Instalación
                                     Color</label>
                                 <input name="cont_insta_color" type="number" class="form-control"
-                                    id="exampleFormControlInput1" required
+                                    id="exampleFormControlInput1"
                                     placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050" value="0">
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlTextarea1" class="form-label">Observaciones:</label>
                                 <textarea name="obser" class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                    placeholder="Agrege un comentario (Opcional) " required></textarea>
+                                    placeholder="Agrege un comentario (Opcional) "></textarea>
                             </div>
 
                             <div class="mb-3">
                                 <label for="exampleFormControlInput1" class="form-label">Anexar Carta de Instalación</label>
                                 <input name="doc" type="file" class="form-control" id="exampleFormControlInput1"
-                                    placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050" required>
+                                    placeholder="Ingrese Contador sin caracteres especiales Ejemplo: 1050">
                             </div>
 
                             <div class="btn-carga">

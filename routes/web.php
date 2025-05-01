@@ -88,3 +88,5 @@ Route::get('contract', [App\Http\Controllers\ScreensController::class,'contract'
 /**ruta install device new park */
 Route::get('/install', [App\Http\Controllers\ScreensController::class,'install'])->name('install');
 
+Route::post('install', [App\Http\Controllers\ParkController::class,'store'])->name('install.store');
+
