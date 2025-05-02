@@ -29251,4 +29251,11 @@ pre[class*=language-] {
   outline: none;
 }
 
+.alquiler  .input-group input{
+  border-bottom: solid 1px #c2c2c2;
+  width: 90%;
+}
 
+.alquiler .bb{
+  width: 50%;
+}

@@ -90,6 +90,77 @@
                     </div>
                 </div>
 
+
+
+                @if ($message_e = Session::get('success'))
+                    <div class="alert alert-success" role="alert">
+                        {{ $message_e }}
+                    </div>
+                @endif
+
+                <!--TABLE ORDEN-->
+                <div class="col-md-15 mb-lg-0 mb-4">
+                    <div class="card mt-4">
+                        <div class="card-header pb-0 p-3">
+                            <div class="row">
+                                <div class="col-6 d-flex align-items-center">
+                                    <h4 class="mb-0">Contratos</h4>
+                                </div>
+
+                                <div class="col-6 text-end mb-3">
+                                    <a class="btn bg-gradient-dark mb-0" href="{{ route('Alquiler.store') }}"><i
+                                    class='bx bx-plus'></i>&nbsp;&nbsp;Nuevo</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="main p-5">
+
+                            <div class="content-table">
+                                <table id="myTable" class="display">
+                                    <thead>
+                                        <tr style="font-size: 13px;">
+                                            <th class="text-center">Opciones</th>
+                                            <th>N# Contrato</th>
+                                            <th>Nombre</th>
+                                            <th>Cliente</th>
+                                            <th>RIF</th>
+                                            <th>Vendedor</th>
+                                            <th>Administrador</th>
+                                            <th>Fecha de Inicio</th>
+                                        </tr>
+                                    </thead>
+
+
+                                    <tbody>
+
+                                        @foreach ($alquilers as $row)
+                                            <tr style="font-size: 12px;">
+                                                <td class="text-center">
+                                                    <a href="" class="btn btn-warning"><i class='bx bxs-edit-alt'></i></a>
+                                                </td>
+                                                <td>{{ $row->n_contract }}</td>
+                                                <td>{{ $row->name_c }}</td>
+                                                <td>{{ $row->cliente }}</td>
+                                                <td>{{ $row->rif }}</td>
+                                                <td>{{ $row->vendedor }}</td>
+                                                <td>{{ $row->administrador }}</td>
+                                                <td>{{ $row->date_init_contract }}</td>
+                                            </tr>
+                                        @endforeach
+
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--TABLE ORDEN-->
+
+
                 <!--section create contact-->
                 <div class="col-md-12 mb-lg-0 mb-4">
                     <div class="card mt-4">
@@ -160,23 +231,23 @@
                                         </div>
 
                                         <div class="input-group mb-4">
-                                                <div class="form-text" id="basic-addon4">Persona de Contacto</div>
-                                                <input type="text" class="form-" placeholder="Por ejemplo, Jose Escalona"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
+                                            <div class="form-text" id="basic-addon4">Persona de Contacto</div>
+                                            <input type="text" class="form-" placeholder="Por ejemplo, Jose Escalona"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div>
 
-                                            <div class="input-group mb-4">
-                                                <div class="form-text" id="basic-addon4">Email</div>
-                                                <input type="text" class="form-"
-                                                    placeholder="Por ejemplo, example@grupoxven.com" aria-label="Username"
-                                                    aria-describedby="basic-addon1">
-                                            </div>
+                                        <div class="input-group mb-4">
+                                            <div class="form-text" id="basic-addon4">Email</div>
+                                            <input type="text" class="form-"
+                                                placeholder="Por ejemplo, example@grupoxven.com" aria-label="Username"
+                                                aria-describedby="basic-addon1">
+                                        </div>
 
-                                            <div class="input-group mb-2">
-                                                <div class="form-text" id="basic-addon4">Movil</div>
-                                                <input type="tel" class="form-" placeholder="Por ejemplo 02123215477"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div><br>
+                                        <div class="input-group mb-2">
+                                            <div class="form-text" id="basic-addon4">Movil</div>
+                                            <input type="tel" class="form-" placeholder="Por ejemplo 02123215477"
+                                                aria-label="Username" aria-describedby="basic-addon1">
+                                        </div><br>
 
                                         <!--form auto completado-->
                                     </div>

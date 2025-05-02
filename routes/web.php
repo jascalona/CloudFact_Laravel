@@ -90,3 +90,6 @@ Route::get('/install', [App\Http\Controllers\ScreensController::class,'install']
 
 Route::post('install', [App\Http\Controllers\ParkController::class,'store'])->name('install.store');
 
+
+/**NEW CONTRACT ALQUILER */
+Route::get('Alquiler', [App\Http\Controllers\AlquilerController::class,'store'])->name('Alquiler.store');

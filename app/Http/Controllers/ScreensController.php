@@ -8,6 +8,7 @@ use App\Models\Park;
 use App\Models\Lgenal;
 use App\Models\Contact;
 use App\Models\lgenals;
+use App\Models\Alquiler;
 use PhpParser\Node\Expr\AssignOp\Concat;
 use App\Http\Controllers\CustomerRequest;
 
@@ -76,7 +77,9 @@ class ScreensController extends Controller
 
     public function contract()
     {
-        return view("screens.contract");
+        $customers = Customer::all();
+        $alquilers = Alquiler::all();
+        return view("screens.contract", compact("customers", "alquilers"));
     }
 
 
