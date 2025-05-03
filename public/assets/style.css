@@ -29259,3 +29259,28 @@ pre[class*=language-] {
 .alquiler .bb{
   width: 50%;
 }
+
+/*stylos checkbox*/
+
+.list-group .list-group-item input{
+  width: auto;
+}
+
+.grop{
+  width: 70%;
+  display: block;
+}
+
+.group-check{
+  display: flex;
+  align-items: center;
+}
+
+.group-check label{
+  font-size: 18px;
+  position: relative;
+}
+
+.group-check input{
+  position: absolute;
+}

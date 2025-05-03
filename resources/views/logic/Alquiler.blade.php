@@ -19,6 +19,7 @@
     <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
 
 
+    <script src="{{ asset('js/check.js') }}"></script>
     <script src="{{ asset('js/tab.js') }}"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
@@ -125,7 +126,7 @@
                             </li>
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link" id="disabled-tab-1" data-bs-toggle="tab" href="#disabled-tabpanel-1"
-                                    role="tab" aria-controls="disabled-tabpanel-1" aria-selected="false">Informacion
+                                    role="tab" aria-controls="disabled-tabpanel-1" aria-selected="false">Información
                                     General</a>
                             </li>
 
@@ -133,8 +134,11 @@
 
                         <div class="tab-content pt-5" id="tab-content">
 
+                            <!--vista 01-->
                             <div class="tab-pane active" id="disabled-tabpanel-0" role="tabpanel"
                                 aria-labelledby="disabled-tab-0">
+
+                                <h4 class="mb-4"><strong>Datos del Cliente</strong></h4>
 
                                 <!--vsita 01 se debe ajustar el responsivo-->
                                 <div class="viw-i d-flex">
@@ -144,9 +148,9 @@
                                                 class="card card-body lectura card-plain border-radius-lg d-block align-items-center flex-row">
                                                 <!--form auto completado-->
 
-                                                <select style="width: 90%;" id="customer"
-                                                    class="form-select form-select-lg mb-3"
-                                                    aria-label="Large select example" name="cliente" required>
+                                                <div class="form-text" id="basic-addon4">Seleccione un Cliente</div>
+                                                <select class="form-select bb form-select-sm mb-5 mt-3 w-90"
+                                                    aria-label="Large select example" required id="customer">
                                                     <option>Seleccione un Cliente</option>
                                                     @foreach ($customers as $select)
                                                         <option value="{{ $select->rif }}">{{ $select->name }}</option>
@@ -174,20 +178,7 @@
                                                             aria-label="Username" aria-describedby="basic-addon1" value="">
                                                     </div>
 
-                                                    <div class="form-text mt-4" id="basic-addon4">Tipo de Contrato</div>
-                                                    <select class="form-select bb form-select-sm mb-6 mt-3"
-                                                        aria-label="Large select example">
-                                                        <option selected></option>
-                                                        <option value="1">FSMA</option>
-                                                        <option value="2">Renta - TCO</option>
-                                                        <option value="3">Renta - Plataforma</option>
-                                                        <option value="2">Copiado minimo</option>
-                                                        <option value="2">SMA</option>
-                                                        <option value="2">Mixto (FSMA + Renta)</option>
-                                                    </select>
-
-
-                                                    <ul class="nav nav-fill nav-tabs w-90" role="tablist">
+                                                    <ul class="nav nav-fill nav-tabs w-90 mt-6" role="tablist">
                                                         <li class="nav-item" role="presentation">
                                                             <a class="nav-link active" id="fill-tab-0" data-bs-toggle="tab"
                                                                 href="#fill-tabpanel-0" role="tab"
@@ -207,8 +198,8 @@
                                                     <div class="tab-content pt-5" id="tab-content">
 
                                                         <!--Vista 01-->
-                                                        <div class="tab-pane active w-100" id="fill-tabpanel-0" role="tabpanel"
-                                                            aria-labelledby="fill-tab-0">
+                                                        <div class="tab-pane active w-100" id="fill-tabpanel-0"
+                                                            role="tabpanel" aria-labelledby="fill-tab-0">
                                                             <!--show click Global-->
                                                             <div class="cont" id="show_global">
                                                                 <div class="form-text" id="basic-addon4">Precio global por
@@ -259,12 +250,32 @@
                                                         aria-describedby="basic-addon1" readonly value="">
                                                 </div>
 
+                                                <div class="form-text" id="basic-addon4">Numero de Contrado
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <input type="text" class="form" placeholder="Por ejemplo: 056JE22K"
+                                                        aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+
+
                                                 <div class="form-text" id="basic-addon4">Duracion del Contrato (Numero)
                                                 </div>
                                                 <div class="input-group mb-3">
                                                     <input type="number" class="form" placeholder="Por ejemplo: 12"
                                                         aria-label="Username" aria-describedby="basic-addon1" value="0">
                                                 </div>
+
+                                                <div class="form-text mt-4" id="basic-addon4">Tipo de Contrato</div>
+                                                <select class="form-select bb form-select-sm mb- mt-3"
+                                                    aria-label="Large select example">
+                                                    <option selected></option>
+                                                    <option value="1">FSMA</option>
+                                                    <option value="2">Renta - TCO</option>
+                                                    <option value="3">Renta - Plataforma</option>
+                                                    <option value="2">Copiado minimo</option>
+                                                    <option value="2">SMA</option>
+                                                    <option value="2">Mixto (FSMA + Renta)</option>
+                                                </select>
 
                                                 <div class="form-text" id="basic-addon4">Vendedor Eje.</div>
                                                 <select class="form-select bb form-select-sm mb-3 mt-3"
@@ -290,12 +301,214 @@
                                 <!--vsita 01 se debe ajustar el responsivo-->
 
                             </div>
+                            <!--vista 01-->
 
 
+
+                            <!--vista 02-->
                             <div class="tab-pane" id="disabled-tabpanel-1" role="tabpanel" aria-labelledby="disabled-tab-1">
-                                Tab 2 selected</div>
+                                <h4 class="mb-4"><strong>Información General</strong></h4>
+                                <!--vsita 012se debe ajustar el responsivo-->
+                                <div class="viw-i d-flex">
+                                    <div class="col-md-6 mb-md-0 mb-4">
+                                        <div class="col-md-">
+                                            <div
+                                                class="card card-body lectura card-plain border-radius-lg d-block align-items-center flex-row">
+                                                <!--form auto completado-->
+
+                                                <div class="form-text mt-2" id="basic-addon4">Información Monetarea</div>
+                                                <select class="form-select bb form-select-sm mb-4 mt-3 w-50"
+                                                    aria-label="Large select example">
+                                                    <option selected></option>
+                                                    <option value="1">Bolivares</option>
+                                                    <option value="2">Dolares</option>
+                                                </select>
+
+                                                <div class="alquiler">
+
+                                                    <div class="form-text mt-4" id="basic-addon4">Razones de Consorcio</div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="text" class="form" placeholder="Razones de Consorcio"
+                                                            aria-label="Username" aria-describedby="basic-addon1" value="">
+                                                    </div>
+
+                                                    <div class="form-text mb-3 mt-5  id=" basic-addon4">Info All In</div>
+                                                    <div class="grop">
+                                                        <div class="group-check">
+                                                            <label for="Equipos">Equipos</label>
+                                                            <input type="checkbox" value="Equipos" id="Equipos">
+                                                        </div>
+
+                                                        <div class="group-check">
+                                                            <label for="Suministros">Suministros</label>
+                                                            <input type="checkbox" value="Suministros" id="Suministros">
+                                                        </div>
+
+                                                        <div class="group-check">
+                                                            <label for="Partes">Partes</label>
+                                                            <input type="checkbox" value="Partes" id="Partes">
+                                                        </div>
+
+                                                        <div class="group-check">
+                                                            <label for="Servicios">Servicios</label>
+                                                            <input type="checkbox" value="Servicios" id="Servicios">
+                                                        </div>
+
+
+                                                        <div class="group-check">
+                                                            <label for="Papel">Papel</label>
+                                                            <input type="checkbox" value="Papel" id="Papel">
+                                                        </div>
+                                                    </div>
+
+                                                    <hr class="w-90">
+
+
+                                                    <h4 class="mt-5 mb-4"><strong>Labores</strong></h4>
+                                                    <div class="grop">
+                                                        <div class="group-check">
+                                                            <label for="admin">Administrador</label>
+                                                            <input type="checkbox" value="Administrador" id="admin"
+                                                                onchange="admin(this);">
+                                                        </div>
+
+                                                        <div class="group-check">
+                                                            <label for="asesor">Asesor Tecnológico</label>
+                                                            <input type="checkbox" value="asesor" id="asesor"
+                                                                onchange="asesor(this);">
+                                                        </div>
+
+                                                        <div class="group-check">
+                                                            <label for="operador">Operador</label>
+                                                            <input type="checkbox" value="Operador" id="operador"
+                                                                onchange="operador(this);">
+                                                        </div>
+
+                                                        <div class="group-check">
+                                                            <label for="analista">Analista</label>
+                                                            <input type="checkbox" value="Analista" id="analista"
+                                                                onchange="analista(this);">
+                                                        </div>
+
+
+                                                        <div class="group-check">
+                                                            <label for="supervisor">Supervisor</label>
+                                                            <input type="checkbox" value="Supervisor" id="supervisor"
+                                                                onchange="supervisor(this);">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                                <!--form auto completado-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <div
+                                            class="card card-body lectura card-plain border-radius-lg d-block align-items-center flex-row">
+                                            <!--form auto completado-->
+
+                                            <div class="alquiler">
+
+                                                <h4 class="mt-"><strong>Labores</strong></h4>
+                                                <div class="input-group mb-4">
+                                                    <div class="form-text" id="basic-addon4">Indexacion Mutuo Acuerdo</div>
+                                                    <input type="text" class="form-" name="rif"
+                                                        placeholder="Dedinir con el cliente" id="rif" aria-label="Username"
+                                                        aria-describedby="basic-addon1" readonly value="">
+                                                </div>
+
+                                                <div class="form-text" id="basic-addon4">Indexacion Porcentaje
+                                                </div>
+                                                <div class="input-group mb-3">
+                                                    <input type="number" class="form" placeholder="%" value="0"
+                                                        aria-label="Username" aria-describedby="basic-addon1">
+                                                </div>
+
+
+                                                <div class="form-text" id="basic-addon4">Indexacion Frecuencia</div>
+                                                <select class="form-select bb form-select-sm mb-3 mt-3"
+                                                    aria-label="Large select example">
+                                                    <option selected></option>
+                                                    <option value="1">Mensual</option>
+                                                    <option value="2">Trimestre</option>
+                                                    <option value="2">Semestre</option>
+                                                    <option value="2">Anual</option>
+                                                </select>
+
+
+                                                <!--inputs show-->
+                                                <div style="display: none;" id="InputAdministrador" class="input-hidden mt-5">
+                                                    <div class="form-text mt-4">Candidad
+                                                        Administrador</div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="Number" class="form"
+                                                            placeholder="Unidades Administrador" aria-label="Username"
+                                                            aria-describedby="basic-addon1" value="">
+                                                    </div>
+                                                </div>
+                                                <!--inputs show-->
+
+                                                <!--inputs show-->
+                                                <div style="display: none;" id="InputAsesor" class="input-hidden">
+                                                    <div class="form-text mt-4">Candidad Asesor</div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="Number" class="form"
+                                                            placeholder="Unidades Administrador" aria-label="Username"
+                                                            aria-describedby="basic-addon1" value="">
+                                                    </div>
+                                                </div>
+                                                <!--inputs show-->
+
+                                                <!--inputs show-->
+                                                <div style="display: none;" id="InputOperador" class="input-hidden">
+                                                    <div class="form-text mt-4">Candidad Operador</div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="Number" class="form" placeholder="Unidades Operador"
+                                                            aria-label="Username" aria-describedby="basic-addon1" value="">
+                                                    </div>
+                                                </div>
+                                                <!--inputs show-->
+
+
+                                                <!--inputs show-->
+                                                <div style="display: none;" id="InputAnalista" class="input-hidden">
+                                                    <div class="form-text mt-4">Candidad Analista</div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="Number" class="form" placeholder="Unidades Analista"
+                                                            aria-label="Username" aria-describedby="basic-addon1" value="">
+                                                    </div>
+                                                </div>
+                                                <!--inputs show-->
+
+                                                   <!--inputs show-->
+                                                   <div style="display: none;" id="InputSupervisor" class="input-hidden">
+                                                    <div class="form-text mt-4">Candidad Supervisor</div>
+                                                    <div class="input-group mb-3">
+                                                        <input type="Number" class="form" placeholder="Unidades Supervisor"
+                                                            aria-label="Username" aria-describedby="basic-addon1" value="">
+                                                    </div>
+                                                </div>
+                                                <!--inputs show-->
+
+
+                                                <!--form auto completado-->
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--vsita 01 se debe ajustar el responsivo-->
+                                </div>
+                            </div>
+                            <!--vista 02-->
+
+
+
+
+
                             <div class="tab-pane" id="disabled-tabpanel-2" role="tabpanel" aria-labelledby="disabled-tab-2">
-                                Tab 3 selected</div>
+                                Tab 3 dfd</div>
 
                         </div>
 
