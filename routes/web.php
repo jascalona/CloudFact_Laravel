@@ -93,3 +93,5 @@ Route::post('install', [App\Http\Controllers\ParkController::class,'store'])->na
 
 /**NEW CONTRACT ALQUILER */
 Route::get('Alquiler', [App\Http\Controllers\AlquilerController::class,'store'])->name('Alquiler.store');
+
+Route::get('edit_alquiler{edit}', [App\Http\Controllers\AlquilerController::class,'edit'])->name('edit_alquiler.edit');

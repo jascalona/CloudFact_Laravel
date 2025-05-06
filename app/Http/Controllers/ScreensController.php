@@ -8,7 +8,7 @@ use App\Models\Park;
 use App\Models\Lgenal;
 use App\Models\Contact;
 use App\Models\lgenals;
-use App\Models\Alquiler;
+use App\Models\Alquilers;
 use PhpParser\Node\Expr\AssignOp\Concat;
 use App\Http\Controllers\CustomerRequest;
 
@@ -78,7 +78,7 @@ class ScreensController extends Controller
     public function contract()
     {
         $customers = Customer::all();
-        $alquilers = Alquiler::all();
+        $alquilers = Alquilers::all();
         return view("screens.contract", compact("customers", "alquilers"));
     }
 
@@ -93,46 +93,35 @@ class ScreensController extends Controller
     /**Method Update */
     public function update(Request $request, $id)
     {
-        $data = request()->validate(
-            [
-                'name' => 'required',
-                'rif' => 'required',
-                'direct_f' => 'required',
-                'city' => 'required',
-                'estado' => 'required',
-                'date_creation' => 'required',
-                'p_contact' => 'required',
-                'p_email' => 'required',
+       if (!empty($_POST['modificar'])) {
+        if (!empty($_POST['rif']) and !empty($_POST['direct_f']) and !empty($_POST['city']) and !empty($_POST['estado'])
+        and !empty($_POST['date_creation']) and !empty($_POST['p_contact']) and !empty($_POST['p_email']) and !empty($_POST['p_movil'])) {
 
-            ],
+            /**Modificar */
+            $contact = Customer::findOrFail($id);
+            $contact->rif = $request->rif;
+            $contact->direct_f = $request->direct_f;
+            $contact->city = $request->city;
+            $contact->estado = $request->estado;
+            $contact->date_creation = $request->date_creation;
+            $contact->p_contact = $request->p_contact;
+            $contact->p_email = $request->p_email;
+            $contact->p_movil = $request->p_movil;
+            $contact->save();
 
-            /**Message Validation */
-            [
-                'name.required' => 'Este Campo no puede quedar vacio!',
-                'rif.required' => 'Este Campo no puede quedar vacio!',
-                'direct_f.required' => 'Este Campo no puede quedar vacio!',
-                'city.required' => 'Este Campo no puede quedar vacio!',
-                'estado.required' => 'Este Campo no puede quedar vacio!',
-                'date_creation.required' => 'Este Campo no puede quedar vacio!',
-                'p_contact.required' => 'Este Campo no puede quedar vacio!',
-                'p_email.required' => 'Este Campo no puede quedar vacio!'
-            ]
+            return redirect()->route('contact')->with('success','El fue modificado con exito!');
 
-        );
+        } else {
+            echo '<script>alert("Los CAmpos Primarios no pueden quedar vacios!")</script>';
+        }
+        
+    
+    } else {
+        echo '<script>alert("Error")</script>';
+    }
+       
 
-        $cliente =Customer::findOrFail($id);
-        $cliente->name = $request->name;
-        $cliente->rif = $request->rif;
-        $cliente->direct_f = $request->direct_f;
-        $cliente->city = $request->city;
-        $cliente->estado = $request->estado;
-        $cliente->date_creation = $request->date_creation;
-        $cliente->p_contact = $request->p_contact;
-        $cliente->p_email = $request->p_email;
-        $cliente->p_movil = $request->p_movil;
-        $cliente->save();
-        return redirect()->route('contact')->with('success', 'El Contacto se modifico con Exito!');
-
+      
 
     }
 

@@ -238,107 +238,126 @@
                                     @method('put')
                                     @csrf
 
-                                    <div class="card-body p-3">
-                                        <div class="row new-contact">
-                                            <div class="col-md-6 mb-md-0 mb-4">
+                                    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel"
+                                        aria-labelledby="home-tab" tabindex="0">
 
-                                                <div style="font-size: 28px" class="input-group mb-3">
-                                                    <input type="text" class="form-" name="name"
-                                                        placeholder="Por ejemplo, Xerox Corpotation" aria-label="Username"
-                                                        aria-describedby="basic-addon1" value="{{ $cliente->name }}">
+                                        <div class="card-body p-3">
+                                            <div class="row new-contact card-lectura">
+
+                                                <div class="viw-header">
+                                                    <div class="logo">
+                                                        <img src="{{ asset('images/cloud-regular-120.png') }}" alt="">
+                                                        <h5>CloudFact<br>
+                                                            <span>Cloud Reading System</span>
+                                                        </h5>
+                                                    </div>
                                                 </div>
 
-                                                <div class="col-md-">
-                                                    <div
-                                                        class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
-                                                        <!--form auto completado-->
-                                                        <div class="input-group mb-4">
-                                                            <div class="form-text" id="basic-addon4">RIF</div>
-                                                            <input type="text" class="form-" name="rif" maxlength="15"
-                                                                required placeholder="Por ejemplo, J000000006"
-                                                                aria-label="Username" aria-describedby="basic-addon1"
-                                                                value="{{ $cliente->rif }}">
-                                                        </div>
+                                                <div class="input-group mb-">
+                                                    <h2>{{ $cliente->name }}</h2>
+                                                </div>
+                                                <hr class="text-center">
 
-                                                        <div class="input-group mb-4">
-                                                            <div class="form-text" id="basic-addon4">Dirección Fiscal
+                                                <div class="col-md-6 mb-md-0 mb-4">
+
+                                                    <div class="col-md-">
+                                                        <div
+                                                            class="card card-body lectura card-plain border-radius-lg d-block align-items-center flex-row">
+                                                            <!--form auto completado-->
+
+
+                                                            <div class="input-group mb-4">
+                                                                <div class="form-text" id="basic-addon4">RIF</div>
+                                                                <input style="border-bottom: solid #d9d9d9 1px" type="text" class=""
+                                                                    placeholder="Por ejemplo, J000000006" name="rif"
+                                                                    aria-label="Username" aria-describedby="basic-addon1"
+                                                                    value="{{ $cliente->rif }}">
                                                             </div>
-                                                            <input type="text" class="form-" name="direct_f" required
-                                                                placeholder="Por ejemplo, Av Eugenio Mendoza Edif Torre La Castellana"
+
+                                                            <div class="input-group mb-4">
+                                                                <div class="form-text" id="basic-addon4">Dirección Fiscal
+                                                                </div>
+                                                                <input style="border-bottom: solid #d9d9d9 1px" type="text" class="form-"
+                                                                    placeholder="Por ejemplo, Av Eugenio Mendoza Edif Torre La Castellana"
+                                                                    aria-label="Username" aria-describedby="basic-addon1"
+                                                                    name="direct_f" value="{{ $cliente->direct_f }}">
+                                                            </div>
+
+                                                            <div class="input-group mb-4">
+                                                                <div class="form-text" id="basic-addon4">Ciudad</div>
+                                                                <input style="border-bottom: solid #d9d9d9 1px" type="text" class="form-"
+                                                                    placeholder="Por ejemplo, Caracas" aria-label="Username"
+                                                                    name="city" aria-describedby="basic-addon1" readonly
+                                                                    value="{{ $cliente->city }}">
+                                                            </div>
+
+                                                            <div class="input-group mb-5">
+                                                                <div class="form-text" id="basic-addon4">Estado</div>
+                                                                <input style="border-bottom: solid #d9d9d9 1px" type="text" class="form-"
+                                                                    placeholder="Por ejemplo, Distrito Capital"
+                                                                    aria-label="Username" aria-describedby="basic-addon1"
+                                                                    name="estado" value="{{ $cliente->estado }}">
+                                                            </div>
+
+                                                            <!--form auto completado-->
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-md-6">
+                                                    <div
+                                                        class="card card-body lectura mt-1 card-plain border-radius-lg d-block align-items-center flex-row">
+                                                        <!--form auto completado-->
+                                                        <div class="form-text" id="basic-addon4">Emision de Contacto</div>
+                                                        <div class="input-group mb-3">
+                                                            <input style="border-bottom: solid #d9d9d9 1px" type="date" class="form-" placeholder="Emision"
                                                                 aria-label="Username" aria-describedby="basic-addon1"
-                                                                value="{{ $cliente->direct_f }}">
+                                                                name="date_creation" value="{{ $cliente->date_creation }}">
                                                         </div>
 
                                                         <div class="input-group mb-4">
-                                                            <div class="form-text" id="basic-addon4">Ciudad</div>
-                                                            <input type="text" class="form-" name="city" required
-                                                                placeholder="Por ejemplo, Caracas" aria-label="Username"
-                                                                aria-describedby="basic-addon1"
-                                                                value="{{ $cliente->city }}">
-                                                        </div>
-
-                                                        <div class="input-group mb-5">
-                                                            <div class="form-text" id="basic-addon4">Estado</div>
-                                                            <input type="text" class="form-" name="estado" required
-                                                                placeholder="Por ejemplo, Distrito Capital"
+                                                            <div class="form-text" id="basic-addon4">Persona de Contacto
+                                                            </div>
+                                                            <input style="border-bottom: solid #d9d9d9 1px" type="text" class="form-"
+                                                                placeholder="Por ejemplo, Jose Escalona"
                                                                 aria-label="Username" aria-describedby="basic-addon1"
-                                                                value="{{ $cliente->estado }}">
+                                                                name="p_contact" value="{{ $cliente->p_contact }}">
                                                         </div>
 
+                                                        <div class="input-group mb-4">
+                                                            <div class="form-text" id="basic-addon4">Email</div>
+                                                            <input style="border-bottom: solid #d9d9d9 1px" type="text" class="form-"
+                                                                placeholder="Por ejemplo, example@grupoxven.com"
+                                                                aria-label="Username" aria-describedby="basic-addon1"
+                                                                name="p_email" value="{{ $cliente->p_email }}">
+                                                        </div>
+
+                                                        <div class="input-group mb-2">
+                                                            <div class="form-text" id="basic-addon4">Movil</div>
+                                                            <input style="border-bottom: solid #d9d9d9 1px" type="tel" class="form-"
+                                                                placeholder="Por ejemplo 02123215477" aria-label="Username"
+                                                                name="p_movil" aria-describedby="basic-addon1"
+                                                                value="{{ $cliente->p_movil }}">
+                                                        </div><br>
                                                         <!--form auto completado-->
                                                     </div>
-                                                </div>
-                                            </div>
 
-                                            <div class="col-md-6">
-                                                <br><br><br><br>
-                                                <div
-                                                    class="card card-body border card-plain border-radius-lg d-block align-items-center flex-row">
-                                                    <!--form auto completado-->
-                                                    <div class="form-text" id="basic-addon4">Emision de Contacto</div>
-                                                    <div class="input-group mb-3">
-                                                        <input type="date" class="form-" placeholder="Emision"
-                                                            name="date_creation" required aria-label="Username"
-                                                            aria-describedby="basic-addon1"
-                                                            value="{{ $cliente->date_creation }}">
+                                                    <div class="col-0 text-end p-2 mt-3 mb-">
+                                                        <button type="submit" value="submit" name="modificar"
+                                                            class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                                                class='bx bxs-save'></i>&nbsp;&nbsp;Guardar</button>
                                                     </div>
 
-                                                    <div class="input-group mb-4">
-                                                        <div class="form-text" id="basic-addon4">Persona de Contacto
-                                                        </div>
-                                                        <input type="text" class="form-"
-                                                            placeholder="Por ejemplo, Jose Escalona" aria-label="Username"
-                                                            required name="p_contact" aria-describedby="basic-addon1"
-                                                            value="{{ $cliente->p_contact }}">
-                                                    </div>
 
-                                                    <div class="input-group mb-4">
-                                                        <div class="form-text" id="basic-addon4">Email</div>
-                                                        <input type="text" class="form-"
-                                                            placeholder="Por ejemplo, example@grupoxven.com" name="p_email"
-                                                            required aria-label="Username" aria-describedby="basic-addon1"
-                                                            value="{{ $cliente->p_email }}">
-                                                    </div>
-
-                                                    <div class="input-group mb-2">
-                                                        <div class="form-text" id="basic-addon4">Movil</div>
-                                                        <input type="tel" class="form-"
-                                                            placeholder="Por ejemplo 02123215477  (Opcional) "
-                                                            aria-label="Username" name="p_movil"
-                                                            aria-describedby="basic-addon1" value="{{ $cliente->p_movil }}">
-                                                    </div><br>
-                                                    <!--form auto completado-->
-                                                </div>
-
-                                                <div class="col-0 text-end p-2 mt-3 mb-">
-                                                    <button type="submit" value="submit" name="modificar"
-                                                        class="btn bg-gradient-dark mb-0" href="javascript:;"><i
-                                                            class='bx bxs-save'></i>&nbsp;&nbsp;Guardar</button>
                                                 </div>
 
                                             </div>
                                         </div>
+
                                     </div>
+
+
+
                                 </form>
                             </div>
                             <!--EDIT-->
