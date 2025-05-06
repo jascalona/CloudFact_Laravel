@@ -4,6 +4,7 @@ use App\Http\Controllers\ImportController;
 use App\Http\Controllers\ParkController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\OrdenController;
 
 
 Route::get('/', function () {
@@ -95,3 +96,7 @@ Route::post('install', [App\Http\Controllers\ParkController::class,'store'])->na
 Route::get('Alquiler', [App\Http\Controllers\AlquilerController::class,'store'])->name('Alquiler.store');
 
 Route::get('edit_alquiler{edit}', [App\Http\Controllers\AlquilerController::class,'edit'])->name('edit_alquiler.edit');
+
+
+/**ruta para generar las ordenes */
+Route::get('Orden{edit}', [App\Http\Controllers\OrdenController::class,'edit'])->name('orden.edit');

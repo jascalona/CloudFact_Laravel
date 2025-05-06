@@ -106,7 +106,7 @@
                                             <div class="card-body position-relative z-index-1 p-3">
                                                 <i class='bx bxs-user text-white'></i>
                                                 <h5 class="text-white mt-4 mb-5 pb-2">
-                                                    {{$clienteL->name}}
+                                                    {{$clienteL->cliente}}
                                                 </h5>
                                                 <div class="d-flex">
                                                     <div class="d-flex">
@@ -218,82 +218,59 @@
                             <div class="card h-100">
                                 <div class="card-header pb-0 p-3">
                                     <div class="row">
-                                        <div class="col-6 d-flex align-items-center">
-                                            <h6 class="mb-3">Resumen de Facturas</h6>
+
+                                        <div class="card-body p-3 pb-0">
+
+                                            <ul class="nav nav-fill nav-tabs" role="tablist">
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link active" id="fill-tab-0" data-bs-toggle="tab"
+                                                        href="#fill-tabpanel-0" role="tab" aria-controls="fill-tabpanel-0"
+                                                        aria-selected="true">Resumen de factura</a>
+                                                </li>
+                                                <li class="nav-item" role="presentation">
+                                                    <a class="nav-link" id="fill-tab-1" data-bs-toggle="tab"
+                                                        href="#fill-tabpanel-1" role="tab" aria-controls="fill-tabpanel-1"
+                                                        aria-selected="false">Orden</a>
+                                                </li>
+
+                                            </ul>
+
                                         </div>
-                                        <!--
-                                                                                                                                                <div class="col-6 text-end">
-                                                                                                                                                    <button class="btn btn-outline-primary btn-sm mb-0">View All</button>
-                                                                                                                                                </div> -->
                                     </div>
-                                </div>
-                                <div class="card-body p-3 pb-0">
-                                    <ul class="list-group">
-                                        <li
-                                            class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="mb-1 text-dark font-weight-bold text-sm">March, 01, 2020</h6>
-                                                <span class="text-xs">#MS-415646</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-sm">
-                                                $180
-                                                <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">
-                                                    <i class='bx bxs-file-pdf'></i> PDF</button>
-                                            </div>
-                                        </li>
-                                        <li
-                                            class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-dark mb-1 font-weight-bold text-sm">February, 10, 2021</h6>
-                                                <span class="text-xs">#RV-126749</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-sm">
-                                                $250
-                                                <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i <i
-                                                        class='bx bxs-file-pdf'></i> PDF</button>
 
-                                            </div>
-                                        </li>
-                                        <li
-                                            class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-dark mb-1 font-weight-bold text-sm">April, 05, 2020</h6>
-                                                <span class="text-xs">#FB-212562</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-sm">
-                                                $560
-                                                <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i <i
-                                                        class='bx bxs-file-pdf'></i> PDF</button>
 
-                                            </div>
-                                        </li>
-                                        <li
-                                            class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-dark mb-1 font-weight-bold text-sm">June, 25, 2019</h6>
-                                                <span class="text-xs">#QW-103578</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-sm">
-                                                $120
-                                                <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i <i
-                                                        class='bx bxs-file-pdf'></i> PDF</button>
+                                    <div class="tab-content pt-5" id="tab-content">
+                                        <div class="tab-pane active" id="fill-tabpanel-0" role="tabpanel"
+                                            aria-labelledby="fill-tab-0">
+                                            <ul class="list-group">
+                                                <li
+                                                    class="list-group-item border-0 d-flex justify-content-between ps-0 mb-2 border-radius-lg">
+                                                    <div class="d-flex flex-column">
+                                                        <h6 class="mb-1 text-dark font-weight-bold text-sm">March, 01, 2020
+                                                        </h6>
+                                                        <span class="text-xs">#MS-415646</span>
+                                                    </div>
+                                                    <div class="d-flex align-items-center text-sm">
+                                                        $180
+                                                        <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4">
+                                                            <i class='bx bxs-file-pdf'></i> PDF</button>
+                                                    </div>
+                                                </li>
 
-                                            </div>
-                                        </li>
-                                        <li
-                                            class="list-group-item border-0 d-flex justify-content-between ps-0 border-radius-lg">
-                                            <div class="d-flex flex-column">
-                                                <h6 class="text-dark mb-1 font-weight-bold text-sm">March, 01, 2019</h6>
-                                                <span class="text-xs">#AR-803481</span>
-                                            </div>
-                                            <div class="d-flex align-items-center text-sm">
-                                                $300
-                                                <button class="btn btn-link text-dark text-sm mb-0 px-0 ms-4"><i <i
-                                                        class='bx bxs-file-pdf'></i> PDF</button>
+                                            </ul>
+                                        </div>
 
+                                        <div class="tab-pane" id="fill-tabpanel-1" role="tabpanel"
+                                            aria-labelledby="fill-tab-1">
+
+                                            <div class="col-12 text-end mb-3">
+                                                <a href="{{ route('orden.edit', $clienteL->id) }}" type="submit" value="submit" name="btn-load"
+                                                    class="btn bg-gradient-dark mb-0" href="javascript:;"><i
+                                                        class='bx bxs-save'></i>&nbsp;&nbsp;Nueva Orden</a>
                                             </div>
-                                        </li>
-                                    </ul>
+
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -306,7 +283,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <p class="text-sm mb-0 text-capitalize">Precion B/N $</p>
-                                            <h4 class="mb-0">0.0241</h4>
+                                            <h4 class="mb-0">{{ $clienteL->P_CLICK_BN_USD }}</h4>
                                         </div>
                                         <div
                                             class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
@@ -327,7 +304,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <p class="text-sm mb-0 text-capitalize">Precion B/N Bs</p>
-                                            <h4 class="mb-0">0.125</h4>
+                                            <h4 class="mb-0">{{ $clienteL->P_CLICK_BN_BS }}</h4>
                                         </div>
                                         <div
                                             class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
@@ -349,7 +326,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <p class="text-sm mb-0 text-capitalize">Precio Color $</p>
-                                            <h4 class="mb-0">1.55</h4>
+                                            <h4 class="mb-0">{{ $clienteL->P_CLICK_COLOR_USD }}</h4>
                                         </div>
                                         <div
                                             class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
@@ -371,7 +348,7 @@
                                     <div class="d-flex justify-content-between">
                                         <div>
                                             <p class="text-sm mb-0 text-capitalize">Precio Color Bs</p>
-                                            <h4 class="mb-0">8.03</h4>
+                                            <h4 class="mb-0">{{ $clienteL->P_CLICK_COLOR_BS }}</h4>
                                         </div>
                                         <div
                                             class="icon icon-md icon-shape bg-gradient-dark shadow-dark shadow text-center border-radius-lg">
@@ -421,7 +398,7 @@
                                 <div class="content-table">
                                     <table id="myTable" class="display">
                                         <thead>
-                                        <tr style="font-size: 13px;">
+                                            <tr style="font-size: 13px;">
                                                 <th>Cliente</th>
                                                 <th>RIF</th>
                                                 <th>Serial</th>

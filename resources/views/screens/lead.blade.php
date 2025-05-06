@@ -134,7 +134,7 @@
                                 <div class="card-header p-2 ps-3">
                                     <div class="d-flex justify-content-between">
                                         <div>
-                                            <p class="text-sm mb-0 text-capitalize">{{ $row->name }}</p>
+                                            <p class="text-sm mb-0 text-capitalize">{{ $row->cliente }}</p>
                                             <h4 class="mb-0 mt-3">{{ $row->rif }}</h4>
                                         </div>
                                         <div

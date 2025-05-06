@@ -30,7 +30,7 @@ class ScreensController extends Controller
     public function lead()
     {
 
-        $customers = Customer::all();
+        $customers = alquilers::all();
         return view("screens.lead", compact("customers"));
     }
 
@@ -45,7 +45,7 @@ class ScreensController extends Controller
 
     public function show($id)
     {
-        $clienteL = Customer::findOrFail($id);
+        $clienteL = alquilers::findOrFail($id);
         $load = lgenals::all();
         return view("layouts.LCustomer", compact("clienteL", "load"));
     }
